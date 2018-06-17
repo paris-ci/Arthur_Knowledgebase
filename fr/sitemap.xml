@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/code/duckenigma-how-to/</loc>
+    <lastmod>2018-06-14T22:26:13+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kb.api-d.com/en/code/duckenigma-how-to/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kb.api-d.com/fr/code/duckenigma-how-to/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/article/lancer-un-processus-au-demarrage/</loc>
+    <lastmod>2018-06-13T10:12:17+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/article/reinitialiser-une-imprimante-a-distance/</loc>
+    <lastmod>2018-06-13T00:19:17+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/article/voir-la-date-dexpiration-du-certificat-dun-site-web-en-ligne-de-commande/</loc>
+    <lastmod>2018-06-13T00:19:17+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/article/installer-windows-10-sur-un-disque-externe-depuis-un-mac/</loc>
+    <lastmod>2018-06-13T00:16:18+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/article/afficher-un-traceroute-sur-une-carte/</loc>
+    <lastmod>2018-06-13T00:12:17+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kb.api-d.com/en/article/afficher-un-traceroute-sur-une-carte/display-traceroute-on-a-map/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kb.api-d.com/fr/article/afficher-un-traceroute-sur-une-carte/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/article/sauvegarde-dun-repertoire/</loc>
+    <lastmod>2018-06-13T00:08:33+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/article/backup-automatise-dune-base-de-donnees/</loc>
+    <lastmod>2018-06-12T18:20:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/page/about/</loc>
+    <lastmod>2018-01-01T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/</loc>
+    <lastmod>2018-06-14T22:26:13+02:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kb.api-d.com/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kb.api-d.com/fr/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/article/</loc>
+    <lastmod>2018-06-13T10:12:17+02:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kb.api-d.com/en/article/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kb.api-d.com/fr/article/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/author/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kb.api-d.com/en/author/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kb.api-d.com/fr/author/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/categories/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kb.api-d.com/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kb.api-d.com/fr/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/code/</loc>
+    <lastmod>2018-06-14T22:26:13+02:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kb.api-d.com/en/code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kb.api-d.com/fr/code/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/categories/linux/</loc>
+    <lastmod>2018-06-14T22:26:13+02:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kb.api-d.com/en/categories/linux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kb.api-d.com/fr/categories/linux/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/categories/mac-os/</loc>
+    <lastmod>2018-06-13T00:19:17+02:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kb.api-d.com/en/categories/mac-os/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kb.api-d.com/fr/categories/mac-os/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/page/</loc>
+    <lastmod>2018-01-01T00:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/tags/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kb.api-d.com/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kb.api-d.com/fr/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/categories/terminal/</loc>
+    <lastmod>2018-06-13T00:19:17+02:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kb.api-d.com/en/categories/terminal/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kb.api-d.com/fr/categories/terminal/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/categories/tutoriels/</loc>
+    <lastmod>2018-06-14T22:26:13+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/categories/windows/</loc>
+    <lastmod>2018-06-13T00:16:18+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Arthur Knowledge Base</title>
+    <link>https://kb.api-d.com/fr/categories/</link>
+    <description>Recent content in Categories on Arthur Knowledge Base</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://kb.api-d.com/fr/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux</title>
+      <link>https://kb.api-d.com/fr/categories/linux/</link>
+      <pubDate>Thu, 14 Jun 2018 22:26:13 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mac Os</title>
+      <link>https://kb.api-d.com/fr/categories/mac-os/</link>
+      <pubDate>Wed, 13 Jun 2018 00:19:17 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/categories/mac-os/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terminal</title>
+      <link>https://kb.api-d.com/fr/categories/terminal/</link>
+      <pubDate>Wed, 13 Jun 2018 00:19:17 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/categories/terminal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutoriels</title>
+      <link>https://kb.api-d.com/fr/categories/tutoriels/</link>
+      <pubDate>Thu, 14 Jun 2018 22:26:13 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/categories/tutoriels/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://kb.api-d.com/fr/categories/windows/</link>
+      <pubDate>Wed, 13 Jun 2018 00:16:18 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/categories/windows/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

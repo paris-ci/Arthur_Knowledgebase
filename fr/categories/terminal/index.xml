@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terminal on Arthur Knowledge Base</title>
+    <link>https://kb.api-d.com/fr/categories/terminal/</link>
+    <description>Recent content in Terminal on Arthur Knowledge Base</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 Jun 2018 00:19:17 +0200</lastBuildDate>
+    
+	<atom:link href="https://kb.api-d.com/fr/categories/terminal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Réinitialiser Une Imprimante À Distance</title>
+      <link>https://kb.api-d.com/fr/article/reinitialiser-une-imprimante-a-distance/</link>
+      <pubDate>Wed, 13 Jun 2018 00:19:17 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/article/reinitialiser-une-imprimante-a-distance/</guid>
+      <description>&lt;p&gt;Si l’une de vos imprimantes expose son port 161, elle est surement contrôlable à l’aide du protocole SNMP. Il est possible de la ré-initialiser à distance à l’aide de l’utilitaire snmpset.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Voir la date d’expiration du certificat d’un site web en ligne de commande</title>
+      <link>https://kb.api-d.com/fr/article/voir-la-date-dexpiration-du-certificat-dun-site-web-en-ligne-de-commande/</link>
+      <pubDate>Wed, 13 Jun 2018 00:19:17 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/article/voir-la-date-dexpiration-du-certificat-dun-site-web-en-ligne-de-commande/</guid>
+      <description>&lt;p&gt;Lorsque vous recevez un email de la part de LetsEncrypt vous informant que l’un de vos certificat à expiré,
+il peut etre intéressant de vérifier si vous utilisez encore celui-ci, ou si il s’agit d’un certificat différent car, comme précisé dans le mail que vous avez reçu :
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Afficher Un Traceroute Sur Une Carte</title>
+      <link>https://kb.api-d.com/fr/article/afficher-un-traceroute-sur-une-carte/</link>
+      <pubDate>Wed, 13 Jun 2018 00:12:17 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/article/afficher-un-traceroute-sur-une-carte/</guid>
+      <description>&lt;p&gt;Pour afficher un traceroute de façon graphique sur une carte, il est possible d’utiliser l’excellent traceroute mapper en y collant la sortie de la commande traceroute, mais il est aussi possible d’utiliser la commande suivante pour ouvrir la page web directement depuis le terminal.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sauvegarde D&#39;un Repertoire</title>
+      <link>https://kb.api-d.com/fr/article/sauvegarde-dun-repertoire/</link>
+      <pubDate>Wed, 13 Jun 2018 00:08:33 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/article/sauvegarde-dun-repertoire/</guid>
+      <description>&lt;p&gt;Il est important de mettre régulièrement en place des sauvegardes afin de réduire le risque de perte de données. De même que pour les backups de vos bases de données mysql, il est aussi important de sauvegarder, par exemple, les fichiers de votre site, si vous effectuez des modifications régulièrement, ou si vos utilisateurs envoient du contenu.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Backup automatisé d’une base de données</title>
+      <link>https://kb.api-d.com/fr/article/backup-automatise-dune-base-de-donnees/</link>
+      <pubDate>Tue, 12 Jun 2018 18:20:53 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/article/backup-automatise-dune-base-de-donnees/</guid>
+      <description>&lt;p&gt;Il est important de mettre régulièrement en place des sauvegardes afin de réduire le risque de perte de données.
+Cet article va vous permettre de générer une commande BASH pour réaliser un backup entier de votre serveur SQL.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorials on Arthur Knowledge Base</title>
+    <link>https://kb.api-d.com/en/categories/tutorials/</link>
+    <description>Recent content in Tutorials on Arthur Knowledge Base</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 14 Jun 2018 22:26:13 +0200</lastBuildDate>
+    
+	<atom:link href="https://kb.api-d.com/en/categories/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to install and create enigmas for a fork of DuckEnigma</title>
+      <link>https://kb.api-d.com/en/code/duckenigma-how-to/</link>
+      <pubDate>Thu, 14 Jun 2018 22:26:13 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/en/code/duckenigma-how-to/</guid>
+      <description>&lt;p&gt;This article is a step-by-step tutorial on how to install a fork of DuckEnigma, and create some questions.
+Let&amp;rsquo;s start by a recap of what DuckEnigma is.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

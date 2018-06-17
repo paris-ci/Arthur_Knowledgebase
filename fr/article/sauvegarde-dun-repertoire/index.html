@@ -1,0 +1,419 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="author" content="Arthur">
+        <meta name="description" content="Arthur Knowledge Base">
+        <meta name="keywords" content="personal, knowledge base, dynamic, responsive, code, tech">
+        <meta name="generator" content="Hugo 0.43-DEV" />
+
+        <link rel="icon" type="image/png" href="https://kb.api-d.com/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="https://kb.api-d.com/favicon-16x16.png" sizes="16x16">
+
+        <link rel="stylesheet" href="https://kb.api-d.com/dist/theme.css">
+
+        
+
+        
+            
+                <link rel="stylesheet" href="https://kb.api-d.com/css/variables.css">
+            
+        
+
+        
+        <title>
+            
+                Arthur Knowledge Base | Sauvegarde D&#39;un Repertoire
+            
+        </title>
+    </head>
+    <body class="bilberry-hugo-theme">
+        
+<nav>
+
+    <div class="container">
+        <ul class="topnav">
+            
+                
+                    <li><a href="/fr/page/about/">A propos de moi</a></li>
+                
+            
+        </ul>
+
+        
+    </div>
+</nav>
+
+
+        <header>
+    <div class="container">
+        <div class="logo">
+            <a href="/fr" class="logo">
+                
+                    <img src="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?d=mm&size=200" alt="">
+                
+
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title"><a href="/fr">Arthur Knowledge Base</a></h3>
+            
+                <span class="subtitle">Mémoire, Tutorials, Bouts de code et bien plus</span>
+            
+        </div>
+
+    <div class="languages">
+                
+                    
+                        <a href="/fr" class="active">fr</a>
+                    
+                
+                    
+                        <a href="/en">en</a>
+                    
+                
+            </div>
+        
+
+        
+        <div class="toggler">
+        
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </div>
+</header>
+
+
+        <div class="main container">
+            
+     
+    <div class="article-wrapper u-cf single">
+        
+            <a class="bubble" href="/fr/article/sauvegarde-dun-repertoire/">
+    <i class="fa fa-fw fa-pencil"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h3><a href="/fr/article/sauvegarde-dun-repertoire/">Sauvegarde D&#39;un Repertoire</a></h3>
+    <div class="meta">
+        <span class="date moment">2018-06-13</span>
+
+        
+            <span class="categories">
+                
+                    <a href="/fr/categories/terminal">Terminal</a>
+                
+                    <a href="/fr/categories/mac-os">Mac OS</a>
+                
+                    <a href="/fr/categories/linux">Linux</a>
+                
+            </span>
+        
+
+        
+    </div>
+
+    
+        <p>Il est important de mettre régulièrement en place des sauvegardes afin de réduire le risque de perte de données. De même que pour les backups de vos bases de données mysql, il est aussi important de sauvegarder, par exemple, les fichiers de votre site, si vous effectuez des modifications régulièrement, ou si vos utilisateurs envoient du contenu.</p>
+
+<p>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="/css/variables.css">
+
+<script>
+    $( document ).ready(function() {
+
+        $(".variable_box").each(function() {
+            add_spans_in_variable_box($(this)[0]);
+        });
+
+        const inputs = $("#params input");
+
+        
+        inputs.each(function() {
+            const value = $(this).val();
+            const name = $(this).attr("name");
+            update_variables(name, value)
+        });
+
+
+        
+        inputs.keyup(function() {
+            const value = $(this).val();
+            const name = $(this).attr("name");
+            update_variables(name, value)
+        });
+
+    });
+
+    function update_variables(name, value) {
+        
+        $('.variable').filter('[data-macro="' + name +'"]').each(
+            function( index ) {
+
+                if ($(this).hasClass("code")) {
+                    hljs.highlightBlock($(this));
+                }
+
+                
+                $(this).text(value);
+
+
+            }
+        )
+    }
+
+    function add_spans_in_variable_box(box) {
+        const inputs = $("#params input");
+        
+
+        inputs.each(function() {
+            const value = $(this).val();
+            const name = $(this).attr("name");
+
+            
+
+            const by = '<span data-macro="' + name + '" class="variable">' + value + '</span>';
+            
+            const before = box.innerHTML;
+            const after = before.split("§§" + name + "§§").join(by);
+            
+
+            box.innerHTML = after;
+        })
+    }
+
+
+
+
+</script>
+
+<h2>Personalisez l&#39;article</h2>
+<form id="params" name="params" target="" method="GET">
+    
+
+<div class="question">
+    <input type="text" value="/var/bck/monsite" name="emplacement_du_backup"><br>
+    <label for="emplacement_du_backup">Emplacement de l&#39;archive à générer</label>
+</div>
+<div class="question">
+    <input type="text" value="/var/www/" name="emplacement_a_backup"><br>
+    <label for="emplacement_a_backup">Dossier à sauvegarder</label>
+</div>
+
+
+    <span style="text-align: right; font-size: 8px; float:right">Les valeurs ne sont pas sauvegardées, rafraichissez la page pour réinitialiser le formulaire</span>
+</form>
+<br>
+</p>
+
+<p>Vous pouvez par exemple utiliser ce simple 1-liner en bash</p>
+
+<p>
+<pre><code class="variable_box bash" style="overflow: auto">tar -cpzf §§emplacement_du_backup§§ §§emplacement_a_backup§§</code></pre></p>
+    
+</div>
+
+    
+<div class="footer no-tags">
+
+
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+
+     
+
+        </div>
+
+        <footer>
+    <div class="container">
+        <div class="recent-posts">
+            <strong>Articles récents</strong>
+                <ul>
+                
+                    <li>
+                        <a href="/fr/code/duckenigma-how-to/">Comment installer et creer des énigmes pour un fork de DuckEnigma</a>
+                    </li>
+                
+                    <li>
+                        <a href="/fr/article/lancer-un-processus-au-demarrage/">Lancer Un Processus Au Démarrage</a>
+                    </li>
+                
+                    <li>
+                        <a href="/fr/article/voir-la-date-dexpiration-du-certificat-dun-site-web-en-ligne-de-commande/">Voir la date d’expiration du certificat d’un site web en ligne de commande</a>
+                    </li>
+                
+                    <li>
+                        <a href="/fr/article/reinitialiser-une-imprimante-a-distance/">Réinitialiser Une Imprimante À Distance</a>
+                    </li>
+                
+                    <li>
+                        <a href="/fr/article/installer-windows-10-sur-un-disque-externe-depuis-un-mac/">Installer Windows 10 Sur Un Disque Externe Depuis Un Mac</a>
+                    </li>
+                
+                    <li>
+                        <a href="/fr/article/afficher-un-traceroute-sur-une-carte/">Afficher Un Traceroute Sur Une Carte</a>
+                    </li>
+                
+                    <li>
+                        <a href="/fr/article/sauvegarde-dun-repertoire/">Sauvegarde D&#39;un Repertoire</a>
+                    </li>
+                
+                    <li>
+                        <a href="/fr/article/backup-automatise-dune-base-de-donnees/">Backup automatisé d’une base de données</a>
+                    </li>
+                
+                </ul>
+        </div>
+
+        <div class="categories">
+            <strong>Catégories</strong>
+
+            
+                <ul>
+                
+                    <li>
+                        <a href="/fr/categories/linux">Linux (7)</a>
+                    </li>
+                
+                    <li>
+                        <a href="/fr/categories/mac-os">Mac os (6)</a>
+                    </li>
+                
+                    <li>
+                        <a href="/fr/categories/terminal">Terminal (5)</a>
+                    </li>
+                
+                    <li>
+                        <a href="/fr/categories/tutoriels">Tutoriels (2)</a>
+                    </li>
+                
+                    <li>
+                        <a href="/fr/categories/windows">Windows (1)</a>
+                    </li>
+                
+                </ul>
+            
+        </div>
+
+        <div class="right">
+            
+            <div class="social-media">
+                <strong>Médias sociaux</strong>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    <a href="https://github.com/paris-ci" target="_blank"><i class="fa fa-github"></i></a>
+                
+                
+            </div>
+            
+
+            <div class="languages">
+                    <strong>Autres langues</strong>
+                    
+                        
+                            <a href="/fr" class="active">fr</a>
+                        
+                    
+                        
+                            <a href="/en">en</a>
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+</footer>
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="https://github.com/paris-ci" target="_blank">
+                &copy;
+                
+                    2018
+                
+                by Arthur
+            </a>
+        </div>
+        <div class="author">
+            <a href="https://github.com/paris-ci/knowledge" target="_blank">Arthur KB</a>
+        </div>
+    </div>
+</div>
+
+
+        
+
+        
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+</script>
+
+        
+
+        <script src="https://kb.api-d.com/dist/theme.js" type="application/javascript"></script>
+
+        
+            
+        
+
+        <script>
+            $(document).ready(function() {
+                $(".moment").each(function() {
+                    $(this).text(
+                        moment( $(this).text() )
+                            .locale( "fr" )
+                            .format('LL')
+                    );
+                });
+
+                $(".footnote-return sup").html("[revenir]")
+            })
+        </script>
+
+        
+
+
+    </body>
+</html>

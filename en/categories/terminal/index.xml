@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terminal on Arthur Knowledge Base</title>
+    <link>https://kb.api-d.com/en/categories/terminal/</link>
+    <description>Recent content in Terminal on Arthur Knowledge Base</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 Jun 2018 00:12:17 +0200</lastBuildDate>
+    
+	<atom:link href="https://kb.api-d.com/en/categories/terminal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Display a traceroute on a map</title>
+      <link>https://kb.api-d.com/en/article/afficher-un-traceroute-sur-une-carte/display-traceroute-on-a-map/</link>
+      <pubDate>Wed, 13 Jun 2018 00:12:17 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/en/article/afficher-un-traceroute-sur-une-carte/display-traceroute-on-a-map/</guid>
+      <description>&lt;p&gt;To display a traceroute graphically on a map, it is possible to use the excellent traceroute mapper by pasting the output of the traceroute command to it,
+but it is also possible to use the following command to open the web page directly from the terminal.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

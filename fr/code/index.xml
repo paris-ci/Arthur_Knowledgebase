@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codes on Arthur Knowledge Base</title>
+    <link>https://kb.api-d.com/fr/code/</link>
+    <description>Recent content in Codes on Arthur Knowledge Base</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 14 Jun 2018 22:26:13 +0200</lastBuildDate>
+    
+	<atom:link href="https://kb.api-d.com/fr/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Comment installer et creer des énigmes pour un fork de DuckEnigma</title>
+      <link>https://kb.api-d.com/fr/code/duckenigma-how-to/</link>
+      <pubDate>Thu, 14 Jun 2018 22:26:13 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/code/duckenigma-how-to/</guid>
+      <description>Désolé, cet article n&amp;rsquo;est pour l&amp;rsquo;instant pas disponible en français. Aidez-moi à le traduire!</description>
+    </item>
+    
+  </channel>
+</rss>

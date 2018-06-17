@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles on Arthur Knowledge Base</title>
+    <link>https://kb.api-d.com/fr/article/</link>
+    <description>Recent content in Articles on Arthur Knowledge Base</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 Jun 2018 10:12:17 +0200</lastBuildDate>
+    
+	<atom:link href="https://kb.api-d.com/fr/article/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lancer Un Processus Au Démarrage</title>
+      <link>https://kb.api-d.com/fr/article/lancer-un-processus-au-demarrage/</link>
+      <pubDate>Wed, 13 Jun 2018 10:12:17 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/article/lancer-un-processus-au-demarrage/</guid>
+      <description>&lt;p&gt;Il est parfois utile de lancer un processus lorsqu&amp;rsquo;un serveur ou qu&amp;rsquo;un ordinateur linux démarre.
+Sur Mac OS, c&amp;rsquo;est plutot simple, il suffit de cliquer sur le processus dans le dock.
+Malheureusement, sous linux, avec une console, c&amp;rsquo;est tout de suite plus compliqué&amp;hellip;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Réinitialiser Une Imprimante À Distance</title>
+      <link>https://kb.api-d.com/fr/article/reinitialiser-une-imprimante-a-distance/</link>
+      <pubDate>Wed, 13 Jun 2018 00:19:17 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/article/reinitialiser-une-imprimante-a-distance/</guid>
+      <description>&lt;p&gt;Si l’une de vos imprimantes expose son port 161, elle est surement contrôlable à l’aide du protocole SNMP. Il est possible de la ré-initialiser à distance à l’aide de l’utilitaire snmpset.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Voir la date d’expiration du certificat d’un site web en ligne de commande</title>
+      <link>https://kb.api-d.com/fr/article/voir-la-date-dexpiration-du-certificat-dun-site-web-en-ligne-de-commande/</link>
+      <pubDate>Wed, 13 Jun 2018 00:19:17 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/article/voir-la-date-dexpiration-du-certificat-dun-site-web-en-ligne-de-commande/</guid>
+      <description>&lt;p&gt;Lorsque vous recevez un email de la part de LetsEncrypt vous informant que l’un de vos certificat à expiré,
+il peut etre intéressant de vérifier si vous utilisez encore celui-ci, ou si il s’agit d’un certificat différent car, comme précisé dans le mail que vous avez reçu :
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installer Windows 10 Sur Un Disque Externe Depuis Un Mac</title>
+      <link>https://kb.api-d.com/fr/article/installer-windows-10-sur-un-disque-externe-depuis-un-mac/</link>
+      <pubDate>Wed, 13 Jun 2018 00:16:18 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/article/installer-windows-10-sur-un-disque-externe-depuis-un-mac/</guid>
+      <description>&lt;p&gt;Il peut être intéressant d&amp;rsquo;installer windows sur votre mac avec boot camp pour lancer des jeux ou travailler avec des programmes non compatibles avec Wine ou Mono. Mais par manque de place, de puissance, ou simplement lorsque une machine virtuelle ne suffit plus, il reste une solution : installer windows sur un disque dur ou SSD externe à votre mac. En quelques heures seulement, vous aurez une version totalement fonctionnelle de Windows, sur disque externe, avec un démarrage possible depuis un mac.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Afficher Un Traceroute Sur Une Carte</title>
+      <link>https://kb.api-d.com/fr/article/afficher-un-traceroute-sur-une-carte/</link>
+      <pubDate>Wed, 13 Jun 2018 00:12:17 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/article/afficher-un-traceroute-sur-une-carte/</guid>
+      <description>&lt;p&gt;Pour afficher un traceroute de façon graphique sur une carte, il est possible d’utiliser l’excellent traceroute mapper en y collant la sortie de la commande traceroute, mais il est aussi possible d’utiliser la commande suivante pour ouvrir la page web directement depuis le terminal.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sauvegarde D&#39;un Repertoire</title>
+      <link>https://kb.api-d.com/fr/article/sauvegarde-dun-repertoire/</link>
+      <pubDate>Wed, 13 Jun 2018 00:08:33 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/article/sauvegarde-dun-repertoire/</guid>
+      <description>&lt;p&gt;Il est important de mettre régulièrement en place des sauvegardes afin de réduire le risque de perte de données. De même que pour les backups de vos bases de données mysql, il est aussi important de sauvegarder, par exemple, les fichiers de votre site, si vous effectuez des modifications régulièrement, ou si vos utilisateurs envoient du contenu.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Backup automatisé d’une base de données</title>
+      <link>https://kb.api-d.com/fr/article/backup-automatise-dune-base-de-donnees/</link>
+      <pubDate>Tue, 12 Jun 2018 18:20:53 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/article/backup-automatise-dune-base-de-donnees/</guid>
+      <description>&lt;p&gt;Il est important de mettre régulièrement en place des sauvegardes afin de réduire le risque de perte de données.
+Cet article va vous permettre de générer une commande BASH pour réaliser un backup entier de votre serveur SQL.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Arthur Knowledge Base</title>
+    <link>https://kb.api-d.com/en/categories/linux/</link>
+    <description>Recent content in Linux on Arthur Knowledge Base</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 14 Jun 2018 22:26:13 +0200</lastBuildDate>
+    
+	<atom:link href="https://kb.api-d.com/en/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to install and create enigmas for a fork of DuckEnigma</title>
+      <link>https://kb.api-d.com/en/code/duckenigma-how-to/</link>
+      <pubDate>Thu, 14 Jun 2018 22:26:13 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/en/code/duckenigma-how-to/</guid>
+      <description>&lt;p&gt;This article is a step-by-step tutorial on how to install a fork of DuckEnigma, and create some questions.
+Let&amp;rsquo;s start by a recap of what DuckEnigma is.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Display a traceroute on a map</title>
+      <link>https://kb.api-d.com/en/article/afficher-un-traceroute-sur-une-carte/display-traceroute-on-a-map/</link>
+      <pubDate>Wed, 13 Jun 2018 00:12:17 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/en/article/afficher-un-traceroute-sur-une-carte/display-traceroute-on-a-map/</guid>
+      <description>&lt;p&gt;To display a traceroute graphically on a map, it is possible to use the excellent traceroute mapper by pasting the output of the traceroute command to it,
+but it is also possible to use the following command to open the web page directly from the terminal.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
