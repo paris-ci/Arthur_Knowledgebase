@@ -7,7 +7,7 @@
         <meta name="author" content="Arthur">
         <meta name="description" content="Arthur Knowledge Base">
         <meta name="keywords" content="personal, knowledge base, dynamic, responsive, code, tech">
-        <meta name="generator" content="Hugo 0.43-DEV" />
+        <meta name="generator" content="Hugo 0.45-DEV" />
 
         <link rel="icon" type="image/png" href="https://kb.api-d.com/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="https://kb.api-d.com/favicon-16x16.png" sizes="16x16">
@@ -389,9 +389,9 @@ pip3.6 install -U git&#43;https://github.com/Rapptz/discord.py@rewrite#egg=disco
 </div>
 
 <p>Your token is currently set to
-<code class="variable_box &lt;nil&gt;">§§bot_token§§</code>
+<code class="variable_box ">§§bot_token§§</code>
 , and your client ID is set to
-<code class="variable_box &lt;nil&gt;">§§bot_id§§</code>.</p>
+<code class="variable_box ">§§bot_id§§</code>.</p>
 
 <h3 id="create-a-credentials-json-file-for-the-bot">Create a credentials.json file for the bot</h3>
 
@@ -412,7 +412,7 @@ pip3.6 install -U git&#43;https://github.com/Rapptz/discord.py@rewrite#egg=disco
 <h3 id="try-to-start-the-bot-optionnal">Try to start the bot (optionnal)</h3>
 
 <p>Type
-<code class="variable_box &lt;nil&gt;">python3.6 ./bot.py</code>
+<code class="variable_box ">python3.6 ./bot.py</code>
 to run the bot. It should start up without errors.</p>
 
 <h3 id="create-a-server-for-the-bot">Create a server for the bot</h3>
@@ -460,14 +460,14 @@ to run the bot. It should start up without errors.</p>
 <p>This should be pretty much self explanatory, but i&rsquo;ll explain in details what each of these fields do :</p>
 
 <ul>
-<li><p>The <code class="variable_box &lt;nil&gt;">&#34;to-level&#34;</code>
-and the <code class="variable_box &lt;nil&gt;">&#34;comment&#34;</code>
+<li><p>The <code class="variable_box ">&#34;to-level&#34;</code>
+and the <code class="variable_box ">&#34;comment&#34;</code>
 fields are ignored by the bot. You can insert the information you need in them freely.</p></li>
 
-<li><p>The <code class="variable_box &lt;nil&gt;">&#34;question&#34;</code>
+<li><p>The <code class="variable_box ">&#34;question&#34;</code>
 field is the question that will get sent to the users.</p></li>
 
-<li><p>The <code class="variable_box &lt;nil&gt;">&#34;hints&#34;</code>
+<li><p>The <code class="variable_box ">&#34;hints&#34;</code>
 field contain a list of messages that can be sent as hints to users. You don&rsquo;t have to specify this field, but this might anger some people if you don&rsquo;t ;) Remember, the hints aren&rsquo;t displayed in order to the users but rather at random, and this means that players don&rsquo;t know :</p>
 
 <ul>
@@ -479,11 +479,11 @@ field contain a list of messages that can be sent as hints to users. You don&rsq
 <p>But, this also means that the order of the list shouldn&rsquo;t matter to you.</p>
 
 <ul>
-<li><p>The <code class="variable_box &lt;nil&gt;">&#34;answers&#34;</code>
+<li><p>The <code class="variable_box ">&#34;answers&#34;</code>
 field is a list of accepted answers.</p></li>
 
-<li><p>The <code class="variable_box &lt;nil&gt;">&#34;flags&#34;</code>
-field can contain, or not, the <code class="variable_box &lt;nil&gt;">&#34;no-case&#34;</code>
+<li><p>The <code class="variable_box ">&#34;flags&#34;</code>
+field can contain, or not, the <code class="variable_box ">&#34;no-case&#34;</code>
 flag, and this means that players answers will be lowered before checking for equality</p></li>
 </ul>
 
@@ -531,7 +531,7 @@ flag, and this means that players answers will be lowered before checking for eq
 </div>
 
 <ul>
-<li>The <code class="variable_box &lt;nil&gt;">&#34;win-message&#34;</code>
+<li>The <code class="variable_box ">&#34;win-message&#34;</code>
 is the message that will be displayed if a correct answer is given.</li>
 </ul>
 
@@ -549,7 +549,7 @@ is the message that will be displayed if a correct answer is given.</li>
 
 <h3 id="configure-the-bot">Configure the bot</h3>
 
-<p>Last steps! Open the bot config file at <code class="variable_box &lt;nil&gt;">§§installation_folder§§/enigma/cogs/helpers/config.py</code> with your favorite editor.</p>
+<p>Last steps! Open the bot config file at <code class="variable_box ">§§installation_folder§§/enigma/cogs/helpers/config.py</code> with your favorite editor.</p>
 
 
 <pre><code class="variable_box sh" style="overflow: auto">nano §§installation_folder§§/enigma/cogs/helpers/config.py</code></pre>
@@ -559,7 +559,7 @@ is the message that will be displayed if a correct answer is given.</li>
 <h3 id="finally">Finally</h3>
 
 <p>Try to run the bot using
-<code class="variable_box &lt;nil&gt;">python3.6 ./bot.py</code>
+<code class="variable_box ">python3.6 ./bot.py</code>
 and see if the commands works. If yes, give yourself and your mods the moderator role, create invites, rules, stuff, and start your event</p>
 
 <h3 id="auto-restart">Auto-restart</h3>

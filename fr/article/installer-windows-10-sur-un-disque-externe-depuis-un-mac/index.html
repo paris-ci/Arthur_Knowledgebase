@@ -7,7 +7,7 @@
         <meta name="author" content="Arthur">
         <meta name="description" content="Arthur Knowledge Base">
         <meta name="keywords" content="personal, knowledge base, dynamic, responsive, code, tech">
-        <meta name="generator" content="Hugo 0.43-DEV" />
+        <meta name="generator" content="Hugo 0.45-DEV" />
 
         <link rel="icon" type="image/png" href="https://kb.api-d.com/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="https://kb.api-d.com/favicon-16x16.png" sizes="16x16">
@@ -302,10 +302,10 @@ Remplissez les paramètres suivant au fur et à mesure que vous suivez le tutori
 
 <h2 id="preparation-de-install-wim-et-imagex-exe">Preparation de install.wim et imagex.exe</h2>
 
-<p>Déplacez imagex depuis <code class="variable_box &lt;nil&gt;">ADK_6\amd64\DSIM\imagex.exe</code> vers <code class="variable_box &lt;nil&gt;">§§imagex§§</code>
-Enfin, copiez depuis l&rsquo;ISO connectée à la VM le fichier <code class="variable_box &lt;nil&gt;">sources/install.wim</code></p>
+<p>Déplacez imagex depuis <code class="variable_box ">ADK_6\amd64\DSIM\imagex.exe</code> vers <code class="variable_box ">§§imagex§§</code>
+Enfin, copiez depuis l&rsquo;ISO connectée à la VM le fichier <code class="variable_box ">sources/install.wim</code></p>
 
-<p><strong>Remplissez le chemin vers le fichier install.wim dans les paramètres de l&rsquo;article, ou placez le dans <code class="variable_box &lt;nil&gt;">§§install_wim§§</code> </strong></p>
+<p><strong>Remplissez le chemin vers le fichier install.wim dans les paramètres de l&rsquo;article, ou placez le dans <code class="variable_box ">§§install_wim§§</code> </strong></p>
 
 <h2 id="partitionnement-du-disque-externe">Partitionnement du disque externe</h2>
 
@@ -313,51 +313,51 @@ Enfin, copiez depuis l&rsquo;ISO connectée à la VM le fichier <code class="var
 
 <p>Ouvrez un invite de commandes en mode administrateur (clic droit, exécuter en tant qu&rsquo;administrateur)</p>
 
-<p>Ouvrez l&rsquo;utilitaire de partitionnement avec la commande <code class="variable_box &lt;nil&gt;">diskpart</code></p>
+<p>Ouvrez l&rsquo;utilitaire de partitionnement avec la commande <code class="variable_box ">diskpart</code></p>
 
-<p>Tapez la commande <code class="variable_box &lt;nil&gt;">list disk</code></p>
+<p>Tapez la commande <code class="variable_box ">list disk</code></p>
 
-<p>Vérifiez que la lettre du disque connecté est bien celle qui est précisée dans les paramètres, c&rsquo;est à dire <code class="variable_box &lt;nil&gt;">§§windows_drive_number§§</code></p>
+<p>Vérifiez que la lettre du disque connecté est bien celle qui est précisée dans les paramètres, c&rsquo;est à dire <code class="variable_box ">§§windows_drive_number§§</code></p>
 
-<p>Sélectionnez votre disque : <code class="variable_box &lt;nil&gt;">select disk §§windows_drive_number§§</code></p>
+<p>Sélectionnez votre disque : <code class="variable_box ">select disk §§windows_drive_number§§</code></p>
 
-<p>Supprimez tout le contenu du disque avec la commande <code class="variable_box &lt;nil&gt;">clean</code></p>
+<p>Supprimez tout le contenu du disque avec la commande <code class="variable_box ">clean</code></p>
 
-<p>Convertissez le en MBR : <code class="variable_box &lt;nil&gt;">convert mbr</code></p>
+<p>Convertissez le en MBR : <code class="variable_box ">convert mbr</code></p>
 
-<p>Creez la partition de boot : <code class="variable_box &lt;nil&gt;">create partition primary size=350</code></p>
+<p>Creez la partition de boot : <code class="variable_box ">create partition primary size=350</code></p>
 
-<p>Formatez cette partition en FAT32 : <code class="variable_box &lt;nil&gt;">format fs=fat32 quick</code></p>
+<p>Formatez cette partition en FAT32 : <code class="variable_box ">format fs=fat32 quick</code></p>
 
-<p>Activez la partition : <code class="variable_box &lt;nil&gt;">active</code></p>
+<p>Activez la partition : <code class="variable_box ">active</code></p>
 
-<p>Assignez lui la lettre <span data-macro="boot_drive_letter" class="variable"></span> :<code class="variable_box &lt;nil&gt;">assign letter=§§boot_drive_letter§§</code></p>
+<p>Assignez lui la lettre <span data-macro="boot_drive_letter" class="variable"></span> :<code class="variable_box ">assign letter=§§boot_drive_letter§§</code></p>
 
-<p>Creez une nouvelle partition primaire : <code class="variable_box &lt;nil&gt;">create partition primary</code></p>
+<p>Creez une nouvelle partition primaire : <code class="variable_box ">create partition primary</code></p>
 
-<p>Formattez la en NTFS : <code class="variable_box &lt;nil&gt;">format fs=ntfs quick</code></p>
+<p>Formattez la en NTFS : <code class="variable_box ">format fs=ntfs quick</code></p>
 
-<p>Assignez lui la lettre <span data-macro="primary_drive_letter" class="variable"></span> : <code class="variable_box &lt;nil&gt;">assign letter=§§primary_drive_letter§§</code></p>
+<p>Assignez lui la lettre <span data-macro="primary_drive_letter" class="variable"></span> : <code class="variable_box ">assign letter=§§primary_drive_letter§§</code></p>
 
-<p>Enfin, fermez l&rsquo;utilitaire de partitionnement : <code class="variable_box &lt;nil&gt;">exit</code></p>
+<p>Enfin, fermez l&rsquo;utilitaire de partitionnement : <code class="variable_box ">exit</code></p>
 
 <p><strong>Ne fermez pas l&rsquo;invite de commandes&hellip;</strong></p>
 
 <h2 id="déployer-l-image-de-windows">Déployer l&rsquo;image de windows</h2>
 
-<p>Il est possible et même probable que votre ISO ait plusieurs options d&rsquo;installation disponibles. Pour les lister, tapez la commande suivante : <code class="variable_box &lt;nil&gt;">§§imagex§§ /info §§install_wim§§</code></p>
+<p>Il est possible et même probable que votre ISO ait plusieurs options d&rsquo;installation disponibles. Pour les lister, tapez la commande suivante : <code class="variable_box ">§§imagex§§ /info §§install_wim§§</code></p>
 
 <p><strong>Remplissez dans les préférences votre index d&rsquo;installation correspondant à la version 64 bits que vous souhaitez installer.</strong></p>
 
 <p>Installez windows sur ce disque avec la commande</p>
 
 
-<pre><code class="variable_box &lt;nil&gt;" style="overflow: auto">§§imagex§§ /apply §§install_wim§§ §§installation_index§§ §§primary_drive_letter§§:</code></pre>
+<pre><code class="variable_box " style="overflow: auto">§§imagex§§ /apply §§install_wim§§ §§installation_index§§ §§primary_drive_letter§§:</code></pre>
 
 <p>Installez le système de démarrage avec la commande suivante :</p>
 
 
-<pre><code class="variable_box &lt;nil&gt;" style="overflow: auto">§§primary_drive_letter§§:\windows\system32\bcdboot §§primary_drive_letter§§:\windows /f ALL /s §§boot_drive_letter§§:</code></pre>
+<pre><code class="variable_box " style="overflow: auto">§§primary_drive_letter§§:\windows\system32\bcdboot §§primary_drive_letter§§:\windows /f ALL /s §§boot_drive_letter§§:</code></pre>
 
 <blockquote>
 <p>Si vous avez un message d&rsquo;erreur indiquant que vous ne pouvez pas éxécuter ce programme sur votre PC, c&rsquo;est que vous etes sur une version 32 bits de windows et que vous essayez d&rsquo;installer une version 64 bits. Veuillez choisir une version 64 bits de windows 10 lors de l&rsquo;installation de votre VM ;) Je ne crains qu&rsquo;il faille recommencer le tutorial du début.</p>
@@ -381,7 +381,7 @@ Enfin, copiez depuis l&rsquo;ISO connectée à la VM le fichier <code class="var
 
 <p>Redémarrez de nouveau sous Windows.</p>
 
-<p>Ouvrez <code class="variable_box &lt;nil&gt;">setup.exe</code> dans <code class="variable_box &lt;nil&gt;">WindowsSupport\WindowsSupport\BootCamp</code> en tant qu&rsquo;administrateur</p>
+<p>Ouvrez <code class="variable_box ">setup.exe</code> dans <code class="variable_box ">WindowsSupport\WindowsSupport\BootCamp</code> en tant qu&rsquo;administrateur</p>
 
 <p>Redémarrez autant de fois que nécéssaire pour que l&rsquo;ensemble de vos périphériques marchent.</p>
 
