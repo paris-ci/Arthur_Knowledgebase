@@ -7,7 +7,7 @@
         <meta name="author" content="Arthur">
         <meta name="description" content="Arthur Knowledge Base">
         <meta name="keywords" content="personal, knowledge base, dynamic, responsive, code, tech">
-        <meta name="generator" content="Hugo 0.45-DEV" />
+        <meta name="generator" content="Hugo 0.44" />
 
         <link rel="icon" type="image/png" href="https://kb.api-d.com/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="https://kb.api-d.com/favicon-16x16.png" sizes="16x16">
@@ -52,7 +52,7 @@
         <div class="logo">
             <a href="/fr" class="logo">
                 
-                    <img src="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?d=mm&size=200" alt="">
+                    <img src="/img/profile.png" alt="">
                 
 
                 <span class="overlay"><i class="fa fa-home"></i></span>
@@ -90,6 +90,63 @@
         <div class="main container">
             
     
+    
+        <div class="article-wrapper u-cf">
+            
+                <a class="bubble" href="/fr/code/duckhunt-how-to/">
+    <i class="fa fa-fw fa-code"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h3><a href="/fr/code/duckhunt-how-to/">Comment installer DuckHunt et DuckHunt Community sur votre propre serveur</a></h3>
+    <div class="meta">
+        <span class="date moment">2018-07-16</span>
+
+        
+            <span class="categories">
+                
+                    <a href="/fr/categories/linux">Linux</a>
+                
+                    <a href="/fr/categories/tutoriels">Tutoriels</a>
+                
+            </span>
+        
+
+        
+    </div>
+
+    
+        Désolé, cet article n&rsquo;est pour l&rsquo;instant pas disponible en français. Aidez-moi à le traduire!
+
+        
+    
+</div>
+
+    
+<div class="footer no-tags">
+
+
+    
+
+    
+    <div class="languages">
+        <i class="fa fa-language"></i>
+        <div class="links">
+            
+                <a href="https://kb.api-d.com/en/code/duckhunt-how-to/">en</a>
+            
+        </div>
+    </div>
+    
+</div>
+
+</article>
+
+            
+        </div>
     
         <div class="article-wrapper u-cf">
             
@@ -357,169 +414,6 @@ il peut etre intéressant de vérifier si vous utilisez encore celui-ci, ou si i
             
         </div>
     
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/fr/article/afficher-un-traceroute-sur-une-carte/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/fr/article/afficher-un-traceroute-sur-une-carte/">Afficher Un Traceroute Sur Une Carte</a></h3>
-    <div class="meta">
-        <span class="date moment">2018-06-13</span>
-
-        
-            <span class="categories">
-                
-                    <a href="/fr/categories/terminal">Terminal</a>
-                
-                    <a href="/fr/categories/linux">Linux</a>
-                
-                    <a href="/fr/categories/mac-os">Mac OS</a>
-                
-            </span>
-        
-
-        
-    </div>
-
-    
-        <p>Pour afficher un traceroute de façon graphique sur une carte, il est possible d’utiliser l’excellent traceroute mapper en y collant la sortie de la commande traceroute, mais il est aussi possible d’utiliser la commande suivante pour ouvrir la page web directement depuis le terminal.</p>
-
-<p></p>
-
-
-<script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous">
-</script>
-
-<link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-<link rel="stylesheet" href="/css/variables.css">
-
-<script>
-    $( document ).ready(function() {
-
-        $(".variable_box").each(function() {
-            add_spans_in_variable_box($(this)[0]);
-        });
-
-        const inputs = $("#params input");
-
-        
-        inputs.each(function() {
-            const value = $(this).val();
-            const name = $(this).attr("name");
-            update_variables(name, value)
-        });
-
-
-        
-        inputs.keyup(function() {
-            const value = $(this).val();
-            const name = $(this).attr("name");
-            update_variables(name, value)
-        });
-
-    });
-
-    function update_variables(name, value) {
-        
-        $('.variable').filter('[data-macro="' + name +'"]').each(
-            function( index ) {
-
-                if ($(this).hasClass("code")) {
-                    hljs.highlightBlock($(this));
-                }
-
-                
-                $(this).text(value);
-
-
-            }
-        )
-    }
-
-    function add_spans_in_variable_box(box) {
-        const inputs = $("#params input");
-        
-
-        inputs.each(function() {
-            const value = $(this).val();
-            const name = $(this).attr("name");
-
-            
-
-            const by = '<span data-macro="' + name + '" class="variable">' + value + '</span>';
-            
-            const before = box.innerHTML;
-            const after = before.split("§§" + name + "§§").join(by);
-            
-
-            box.innerHTML = after;
-        })
-    }
-
-
-
-
-</script>
-
-<h2>Personalisez l&#39;article</h2>
-<form id="params" name="params" target="" method="GET">
-    
-
-<div class="question">
-    <input type="text" value="google.fr" name="ip"><br>
-    <label for="ip">Nom de domaine ou IP vers lequel effectuer le traceroute</label>
-</div>
-<div class="question">
-    <input type="text" value="open" name="open_cmd"><br>
-    <label for="open_cmd">Commande pour ouvrir une page web sur votre machine</label>
-</div>
-
-
-    <span style="text-align: right; font-size: 8px; float:right">Les valeurs ne sont pas sauvegardées, rafraichissez la page pour réinitialiser le formulaire</span>
-</form>
-<br>
-
-
-<p>
-<pre><code class="variable_box bash" style="overflow: auto">§§open_cmd§§ &#34;http://stefansundin.github.io/traceroute-mapper/?trace=$(traceroute -q1 §§ip§§)&#34;</code></pre></p>
-    
-</div>
-
-    
-<div class="footer no-tags">
-
-
-    
-
-    
-    <div class="languages">
-        <i class="fa fa-language"></i>
-        <div class="links">
-            
-                <a href="https://kb.api-d.com/en/article/afficher-un-traceroute-sur-une-carte/display-traceroute-on-a-map/">en</a>
-            
-        </div>
-    </div>
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
 
     
     <div class="paginator">
@@ -539,6 +433,10 @@ il peut etre intéressant de vérifier si vous utilisez encore celui-ci, ou si i
         <div class="recent-posts">
             <strong>Articles récents</strong>
                 <ul>
+                
+                    <li>
+                        <a href="/fr/code/duckhunt-how-to/">Comment installer DuckHunt et DuckHunt Community sur votre propre serveur</a>
+                    </li>
                 
                     <li>
                         <a href="/fr/code/duckenigma-how-to/">Comment installer et creer des énigmes pour un fork de DuckEnigma</a>
@@ -582,7 +480,7 @@ il peut etre intéressant de vérifier si vous utilisez encore celui-ci, ou si i
                 <ul>
                 
                     <li>
-                        <a href="/fr/categories/linux">Linux (7)</a>
+                        <a href="/fr/categories/linux">Linux (8)</a>
                     </li>
                 
                     <li>
@@ -594,7 +492,7 @@ il peut etre intéressant de vérifier si vous utilisez encore celui-ci, ou si i
                     </li>
                 
                     <li>
-                        <a href="/fr/categories/tutoriels">Tutoriels (2)</a>
+                        <a href="/fr/categories/tutoriels">Tutoriels (3)</a>
                     </li>
                 
                     <li>

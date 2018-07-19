@@ -5,10 +5,23 @@
     <link>https://kb.api-d.com/en/code/</link>
     <description>Recent content in Codes on Arthur Knowledge Base</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 14 Jun 2018 22:26:13 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 16 Jul 2018 12:26:13 +0200</lastBuildDate>
     
 	<atom:link href="https://kb.api-d.com/en/code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to install DuckHunt and DuckHunt community on your server</title>
+      <link>https://kb.api-d.com/en/code/duckhunt-how-to/</link>
+      <pubDate>Mon, 16 Jul 2018 12:26:13 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/en/code/duckhunt-how-to/</guid>
+      <description>&lt;p&gt;This article is a step-by-step tutorial on how to install DuckHunt, and the support server bot, DuckHunt Community.
+If you want to help developing the bot, this tutorial is the official way to setup your developpement environnemnt&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s start by a recap of what DuckHunt (&lt;em&gt;DH&lt;/em&gt;), and DuckHunt-Community (&lt;em&gt;DHC&lt;/em&gt;) is.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>How to install and create enigmas for a fork of DuckEnigma</title>
