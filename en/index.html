@@ -121,9 +121,369 @@ If you want to help developing the bot, this tutorial is the official way to set
 <p>Let&rsquo;s start by a recap of what DuckHunt (<em>DH</em>), and DuckHunt-Community (<em>DHC</em>) is.
 </p>
 
+<h2 id="what-is-duckhunt">What is DuckHunt</h2>
+
+<p>DuckHunt is a discord game bot, created following MenzAgitat own DuckHunt IRC bot. The primary goal of the game is to kill ducks.
+To make the game more fun and entertaining, a big number of commands, shop items, special ducks, have been added since the first version.</p>
+
+<p>Of course, hosting a big game across so many discord servers (<em>guilds</em>) require a great support team. The support is provided, on the
+<a href="https://discord.gg/2BksEkV">official DuckHunt Support Server</a>. To help with moderating the previous server, a custom bot has been developed : DuckHunt-Community</p>
+
+<p>Both bots use the latest version of python on discord.py at the time of writing, respectively 3.6 and the rewrite branch.</p>
+
+<p>The game has been open-sourced on <a href="https://github.com/duckhunt-discord/DHV3">GitHub</a>.</p>
+
+<h3 id="where-can-i-find-help-on-the-duckhunt-bot">Where can I find help on the DuckHunt Bot</h3>
+
+<p>If you don&rsquo;t want to install DuckHunt, but just want to use it, <strong>you are in the wrong place</strong>. An up-to-date website with the command list, the settings,
+usage, FAQs, and the installation tutorial to get the official bot on your server are available on the <a href="https://duckhunt.me">Bot Website</a></p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>If you want to proceed with the bot installation, you&rsquo;ll need :</p>
+
+<ul>
+<li>A VPS or a linux (ubuntu) box to run the bot. You can get them for cheap at ScaleWay (a START1-M or L will do just fine, depending on the guild count) or DigitalOcean, but you <strong>can&rsquo;t get them for free</strong></li>
+<li>An internet connection</li>
+<li>A basic understanding of terminal, and discord bots</li>
+<li>A discord account</li>
+</ul>
+
+<p>Additionally, the configuration used in this tutorial is as follow.</p>
+
+<ul>
+<li>A START1-M VPS bought at ScaleWay</li>
+<li>The latest ubuntu LTS version : <a href="https://wiki.ubuntu.com/BionicBeaver">Bionic Beaver</a> (18.04)</li>
+<li>IPv6 Disabled, we don&rsquo;t need it to connect to Discord.</li>
+</ul>
+
+<p>Feel free to change this configuration if needed, but you may need to adapt some parts of the tutorial.</p>
+
+<h2 id="roadmap">Roadmap</h2>
+
+<p>We&rsquo;ll start by installing dependencies to both bots, then we will fully install DuckHunt, and to finish things up DuckHunt Commmunity</p>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="/css/variables.css">
+
+<script>
+    $( document ).ready(function() {
+
+        $(".variable_box").each(function() {
+            add_spans_in_variable_box($(this)[0]);
+        });
+
+        const inputs = $("#params input");
+
         
-            <a href="/en/code/duckhunt-how-to/" class="more">Continue reading</a>
+        inputs.each(function() {
+            const value = $(this).val();
+            const name = $(this).attr("name");
+            update_variables(name, value)
+        });
+
+
         
+        inputs.keyup(function() {
+            const value = $(this).val();
+            const name = $(this).attr("name");
+            update_variables(name, value)
+        });
+
+    });
+
+    function update_variables(name, value) {
+        
+        $('.variable').filter('[data-macro="' + name +'"]').each(
+            function( index ) {
+
+                if ($(this).hasClass("code")) {
+                    hljs.highlightBlock($(this));
+                }
+
+                
+                $(this).text(value);
+
+
+            }
+        )
+    }
+
+    function add_spans_in_variable_box(box) {
+        const inputs = $("#params input");
+        
+
+        inputs.each(function() {
+            const value = $(this).val();
+            const name = $(this).attr("name");
+
+            
+
+            const by = '<span data-macro="' + name + '" class="variable">' + value + '</span>';
+            
+            const before = box.innerHTML;
+            const after = before.split("§§" + name + "§§").join(by);
+            
+
+            box.innerHTML = after;
+        })
+    }
+
+
+
+
+</script>
+
+<h2>Customize this post</h2>
+<form id="params" name="params" target="" method="GET">
+    
+
+<div class="question">
+    <input type="text" value="127.0.0.1" name="server_IP"><br>
+    <label for="server_IP">IP of the server where you&#39;ll install the bots</label>
+</div>
+
+<div class="question">
+    <input type="text" value="/home/duckhunt/DH" name="DH_installation_folder"><br>
+    <label for="DH_installation_folder">Folder where you&#39;ll install DuckHunt</label>
+</div>
+
+<div class="question">
+    <input type="text" value="/home/duckhunt/DHC" name="DHC_installation_folder"><br>
+    <label for="DHC_installation_folder">Folder where you&#39;ll install DuckHunt-Community</label>
+</div>
+
+<div class="question">
+    <input type="text" value="duckhunt" name="DH_mysql_db_name"><br>
+    <label for="DH_mysql_db_name">Name of the DuckHunt Database</label>
+</div>
+
+<div class="question">
+    <input type="text" value="duckhunt" name="DH_mysql_db_user"><br>
+    <label for="DH_mysql_db_user">Name of the DuckHunt Database User</label>
+</div>
+
+<div class="question">
+    <input type="text" value="CHANGEME" name="DH_mysql_db_password"><br>
+    <label for="DH_mysql_db_password">Password of the DuckHunt Database User</label>
+</div>
+
+<div class="question">
+    <input type="text" value="187636089073172481" name="DH_ID"><br>
+    <label for="DH_ID">Your DuckHunt bot ID</label>
+</div>
+
+<div class="question">
+    <input type="text" value="XXXXXXXXXXXXXXXX.XXXXXX.XXXXXXXXXXXXXXXX" name="DH_token"><br>
+    <label for="DH_token">Your DuckHunt bot token (not transmitted to any server, but don&#39;t take my word for it and check the webpage code by yourself if you are not sure)</label>
+</div>
+
+<div class="question">
+    <input type="text" value="306062561021919242" name="DHC_ID"><br>
+    <label for="DHC_ID">Your DuckHunt-Community bot ID</label>
+</div>
+
+<div class="question">
+    <input type="text" value="XXXXXXXXXXXXXXXX.XXXXXX.XXXXXXXXXXXXXXXX" name="DHC_token"><br>
+    <label for="DHC_token">Your DuckHunt-Community bot token</label>
+</div>
+
+
+    <span style="text-align: right; font-size: 8px; float:right">The form values are not saved, refresh the page to reset them</span>
+</form>
+<br>
+
+
+<h2 id="installation">Installation</h2>
+
+<h3 id="dependencies">Dependencies</h3>
+
+<p>Let&rsquo;s connect to our new server using
+
+<pre><code class="variable_box sh" style="overflow: auto">ssh root@§§server_IP§§</code></pre></p>
+
+<p>Now, let&rsquo;s get the system up-to-date and install dependencies:</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">apt update
+apt upgrade -y
+apt install -y apt-utils git htop screen apache2 php php-mysql python3-pip python3-dev mysql-client mysql-server libmysqlclient-dev</code></pre>
+
+<p>Create the DuckHunt User</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">adduser duckhunt</code></pre>
+
+<p>And provide a password if asked.</p>
+
+<p>Download the code of both bots in the specified directories.</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">su - duckhunt
+git clone https://github.com/DuckHunt-discord/DHV3.git §§DH_installation_folder§§
+git clone https://github.com/DuckHunt-discord/DuckHunt-Community-Rewrite.git §§DHC_installation_folder§§
+exit</code></pre>
+
+<p>Let&rsquo;s install python requirements for DuckHunt</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">cd §§DH_installation_folder§§
+pip3 install -r requirements.txt</code></pre>
+
+<h3 id="duckhunt">DuckHunt</h3>
+
+<h4 id="database">Database</h4>
+
+<p>Time have come to create the database for DuckHunt.</p>
+
+<p>Login as the root user on the DataBase:</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">mysql -u root -proot</code></pre>
+
+<p>In the MySQL prompt, to create the user and the database, write</p>
+
+
+<pre><code class="variable_box sql" style="overflow: auto">create database §§DH_mysql_db_name§§;
+grant all privileges on §§DH_mysql_db_name§§.* to &#39;§§DH_mysql_db_user§§&#39;@&#39;localhost&#39; identified by &#34;§§DH_mysql_db_password§§&#34;;
+flush privileges;
+exit;</code></pre>
+
+<p>Then, load the schema into the database.</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">mysql --database=§§DH_mysql_db_name§§ -u §§DH_mysql_db_user§§ -p§§DH_mysql_db_password§§ &lt; §§DH_installation_folder§§/schema.sql</code></pre>
+
+<h4 id="configuration">Configuration</h4>
+
+<p>Now that the database is correctly setup, give the bot the credentials to connect to discord.</p>
+
+<p>For this, create a <code>credentials.json</code> file using</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">nano §§DH_installation_folder§§/credentials.json</code></pre>
+
+<p>In this file, add the following :</p>
+
+
+<pre><code class="variable_box json" style="overflow: auto">{
+  &#34;token&#34;: &#34;§§DH_token§§&#34;,
+  &#34;bots_discord_pw_key&#34; : &#34;&#34;,
+  &#34;discordbots_org_key&#34; : &#34;&#34;
+}</code></pre>
+
+<p>Then, save and quit (CTRL-X + Y).</p>
+
+<p>Open the configuration file with</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">nano §§DH_installation_folder§§/cogs/helpers/config.py</code></pre>
+
+<p>At least, locate the lines concerning the database settings and update them to look like this:</p>
+
+
+<pre><code class="variable_box python" style="overflow: auto"># &gt; Database settings &lt; #
+# User used to connect to the Mysql DB
+bot.database_user = &#34;§§DH_mysql_db_user§§&#34;
+
+# Password for the user used to connect to the Mysql DB
+bot.database_password = &#34;§§DH_mysql_db_password§§&#34;
+
+# Name of the table used in the Mysql DB
+bot.database_name = &#34;§§DH_mysql_db_name§§&#34;</code></pre>
+
+<p>Of course, you can update other settings there.</p>
+
+<p>Then, save and exit (CTRL-X + Y).</p>
+
+<h4 id="starting">Starting</h4>
+
+<p>DuckHunt should now be working \o/. To test and start it, type</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">cd §§DH_installation_folder§§ &amp;&amp; python3 ./bot.py</code></pre>
+
+<h4 id="website">WebSite</h4>
+
+<p>Let&rsquo;s start by configuring the DB for it :</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">nano §§DH_installation_folder§§/web/duckstats.php</code></pre>
+
+<p>Locate the lines like this and replace them:</p>
+
+
+<pre><code class="variable_box php" style="overflow: auto">$dbname   = &#34;§§DH_mysql_db_name§§&#34;;
+$username   = &#34;§§DH_mysql_db_user§§&#34;;
+$password   = &#34;§§DH_mysql_db_password§§&#34;;</code></pre>
+
+<p>You can also change the server name in <code>web/live-ducks.php</code> if needed</p>
+
+<p>A simple symlink should do the trick to serve it:
+
+<pre><code class="variable_box sh" style="overflow: auto">rm -Rv /var/www/html
+ln -s §§DH_installation_folder§§/web /var/www/html </code></pre></p>
+
+<p>Finally, to save the data from the stats API periodically, open the crontab
+
+<pre><code class="variable_box sh" style="overflow: auto">su - duckhunt
+crontab -e</code></pre></p>
+
+<p>Add the following :</p>
+
+
+<pre><code class="variable_box cron" style="overflow: auto">0 * * * * cd §§DH_installation_folder§§/web ; python3 ./save_historical_to_csv.py</code></pre>
+
+<p>Exit nano as usual, and type <code>exit</code> to return to the root prompt</p>
+
+<h3 id="duckhunt-community">DuckHunt Community</h3>
+
+<p>DuckHunt Community should be really easier to install, since we don&rsquo;t require a database for it.</p>
+
+<h4 id="create-necessary-directories">Create necessary directories</h4>
+
+<p>To let DuckHunt-Community store data about bans and stuff, we&rsquo;ll need the following directory structure.
+
+<pre><code class="variable_box sh" style="overflow: auto">mkdir §§DHC_installation_folder§§/mods
+mkdir §§DHC_installation_folder§§/mods/cases
+mkdir §§DHC_installation_folder§§/mods/users
+echo &#39;1&#39; &gt; §§DHC_installation_folder§§/mods/current_case.txt
+mkdir §§DHC_installation_folder§§/users</code></pre></p>
+
+<h4 id="configuration-1">Configuration</h4>
+
+<p>Again, give the bot the credentials to connect to discord.</p>
+
+<p>For this, create a <code>credentials.json</code> file using</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">nano §§DHC_installation_folder§§/credentials.json</code></pre>
+
+<p>In this file, add the following :</p>
+
+
+<pre><code class="variable_box json" style="overflow: auto">{
+  &#34;token&#34;: &#34;§§DHC_token§§&#34;
+}</code></pre>
+
+<h3 id="last-steps">Last Steps</h3>
+
+<h4 id="auto-restart">Auto-restart</h4>
+
+<p>You&rsquo;ll probably want the bot to restart every time it fails, or when you use the <code>dhexit</code> command. Feel free to use <a href="/fr/article/lancer-un-processus-au-demarrage/">this tutorial</a> for this.</p>
+
+<h4 id="backup-script">Backup Script</h4>
     
 </div>
 
