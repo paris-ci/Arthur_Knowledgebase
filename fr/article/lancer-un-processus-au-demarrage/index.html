@@ -356,8 +356,7 @@ WantedBy=multi-user.target</code></pre>
 <p>Enfin, préparez et lancez votre service:</p>
 
 
-<pre><code class="variable_box bash" style="overflow: auto">chmod 664 /etc/systemd/system/§§name§§.service
-systemctl daemon-reload
+<pre><code class="variable_box bash" style="overflow: auto">systemctl daemon-reload
 systemctl enable §§name§§.service</code></pre>
 
 <p>Pour lancer votre service immédiatement, tapez :</p>
