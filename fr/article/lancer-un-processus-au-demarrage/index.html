@@ -3,14 +3,24 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <meta name="author" content="Arthur">
         <meta name="description" content="Arthur Knowledge Base">
         <meta name="keywords" content="personal, knowledge base, dynamic, responsive, code, tech">
         <meta name="generator" content="Hugo 0.44" />
-
+        <title> Lancer Un Processus Au Démarrage | Arthur Knowledge Base</title>
+        <meta name="description" content="Lancer Un Processus Au Démarrage - Arthur Knowledge Base">
+        <meta itemprop="name" content="Lancer Un Processus Au Démarrage">
+        <meta itemprop="description" content="Lancer Un Processus Au Démarrage - Arthur Knowledge Base">
+        <meta property="og:title" content="Lancer Un Processus Au Démarrage">
+        <meta property="og:description" content="Lancer Un Processus Au Démarrage - Arthur Knowledge Base">
+        <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+        <meta property="og:url" content="https://kb.api-d.com/fr/article/lancer-un-processus-au-demarrage/">
+        <meta property="og:site_name" content="Arthur Knowledge Base">
+        <meta property="og:type" content="article">
         <link rel="icon" type="image/png" href="https://kb.api-d.com/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="https://kb.api-d.com/favicon-16x16.png" sizes="16x16">
+
+	
 
         <link rel="stylesheet" href="https://kb.api-d.com/dist/theme.css">
 
@@ -21,13 +31,6 @@
                 <link rel="stylesheet" href="https://kb.api-d.com/css/variables.css">
             
         
-
-        
-        <title>
-            
-                Arthur Knowledge Base | Lancer Un Processus Au Démarrage
-            
-        </title>
     </head>
     <body class="bilberry-hugo-theme">
         
@@ -52,7 +55,7 @@
         <div class="logo">
             <a href="/fr" class="logo">
                 
-                    <img src="/img/profile.png" alt="">
+                    <img src="/fr/img/profile.png" alt="">
                 
 
                 <span class="overlay"><i class="fa fa-home"></i></span>
@@ -102,7 +105,9 @@
     <div class="content">
     <h3><a href="/fr/article/lancer-un-processus-au-demarrage/">Lancer Un Processus Au Démarrage</a></h3>
     <div class="meta">
-        <span class="date moment">2018-06-13</span>
+        
+            <span class="date moment">2018-06-13</span>
+        
 
         
             <span class="categories">
@@ -346,7 +351,7 @@ WantedBy=multi-user.target</code></pre>
 <p>N&rsquo;oubliez pas de rendre votre script exécutable:</p>
 
 
-<pre><code class="variable_box bash" style="overflow: auto">chmod 744 §§cmd§§</code></pre>
+<pre><code class="variable_box bash" style="overflow: auto">chmod 744 /etc/systemd/system/§§name§§.service</code></pre>
 
 <p>Enfin, préparez et lancez votre service:</p>
 
@@ -434,15 +439,20 @@ en lancant le programme dans un screen
     </div>
 
     
+        
+    
 
      
 
         </div>
 
-        <footer>
+        
+<footer>
     <div class="container">
+
+        
         <div class="recent-posts">
-            <strong>Articles récents</strong>
+            <strong>Derniers articles</strong>
                 <ul>
                 
                     <li>
@@ -473,21 +483,13 @@ en lancant le programme dans un screen
                         <a href="/fr/article/afficher-un-traceroute-sur-une-carte/">Afficher Un Traceroute Sur Une Carte</a>
                     </li>
                 
-                    <li>
-                        <a href="/fr/article/sauvegarde-dun-repertoire/">Sauvegarde D&#39;un Repertoire</a>
-                    </li>
-                
-                    <li>
-                        <a href="/fr/article/backup-automatise-dune-base-de-donnees/">Backup automatisé d’une base de données</a>
-                    </li>
-                
                 </ul>
         </div>
+        
 
+        
         <div class="categories">
-            <strong>Catégories</strong>
-
-            
+            <a href="/fr/categories/"><strong>Catégories</strong></a>
                 <ul>
                 
                     <li>
@@ -510,14 +512,14 @@ en lancant le programme dans un screen
                         <a href="/fr/categories/windows">Windows (1)</a>
                     </li>
                 
-                </ul>
-            
+            </ul>
         </div>
+        
 
         <div class="right">
             
-            <div class="social-media">
-                <strong>Médias sociaux</strong>
+            <div class="external-profiles">
+                <strong>Des médias sociaux</strong>
 
                 
                 
@@ -552,6 +554,7 @@ en lancant le programme dans un screen
     </div>
 </footer>
 
+
 <div class="credits">
     <div class="container">
         <div class="copyright">
@@ -562,6 +565,8 @@ en lancant le programme dans un screen
                 
                 by Arthur
             </a>
+	    -
+	    
         </div>
         <div class="author">
             <a href="https://github.com/paris-ci/knowledge" target="_blank">Arthur KB</a>
