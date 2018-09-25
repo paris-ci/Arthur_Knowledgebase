@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tf2 on Arthur Knowledge Base</title>
+    <link>https://kb.api-d.com/en/categories/tf2/</link>
+    <description>Recent content in Tf2 on Arthur Knowledge Base</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 24 Jul 2018 00:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://kb.api-d.com/en/categories/tf2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create a TF2 server</title>
+      <link>https://kb.api-d.com/en/article/creer-un-serveur-tf2/create-a-tf2-server/</link>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/en/article/creer-un-serveur-tf2/create-a-tf2-server/</guid>
+      <description>&lt;p&gt;TF2 is a fun game I&amp;rsquo;d like people to play on. Unfortunately, it&amp;rsquo;s not as easy to set up a TF2 server (compared to, IE, a minecraft server), but I did the work for you with this tutorial :).&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

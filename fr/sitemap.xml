@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kb.api-d.com/fr/article/creer-un-serveur-tf2/</loc>
+    <lastmod>2018-07-24T00:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kb.api-d.com/en/article/creer-un-serveur-tf2/create-a-tf2-server/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kb.api-d.com/fr/article/creer-un-serveur-tf2/"
+                />
+  </url>
+  
+  <url>
     <loc>https://kb.api-d.com/fr/code/duckhunt-how-to/</loc>
     <lastmod>2018-07-16T12:26:13+02:00</lastmod>
     <xhtml:link
@@ -84,7 +99,7 @@
   
   <url>
     <loc>https://kb.api-d.com/fr/</loc>
-    <lastmod>2018-07-16T12:26:13+02:00</lastmod>
+    <lastmod>2018-07-24T00:00:00+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -100,7 +115,7 @@
   
   <url>
     <loc>https://kb.api-d.com/fr/article/</loc>
-    <lastmod>2018-06-13T10:12:17+02:00</lastmod>
+    <lastmod>2018-07-24T00:00:00+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -162,7 +177,7 @@
   
   <url>
     <loc>https://kb.api-d.com/fr/categories/linux/</loc>
-    <lastmod>2018-07-16T12:26:13+02:00</lastmod>
+    <lastmod>2018-07-24T00:00:00+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -199,6 +214,12 @@
   </url>
   
   <url>
+    <loc>https://kb.api-d.com/fr/categories/serveur/</loc>
+    <lastmod>2018-07-24T00:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://kb.api-d.com/fr/tags/</loc>
     <priority>0</priority>
     <xhtml:link
@@ -226,6 +247,22 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://kb.api-d.com/fr/categories/terminal/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/categories/tf2/</loc>
+    <lastmod>2018-07-24T00:00:00+02:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kb.api-d.com/en/categories/tf2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kb.api-d.com/fr/categories/tf2/"
                 />
   </url>
   

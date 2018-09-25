@@ -1,0 +1,586 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Arthur">
+        <meta name="description" content="Arthur Knowledge Base">
+        <meta name="keywords" content="personal, knowledge base, dynamic, responsive, code, tech">
+        <meta name="generator" content="Hugo 0.44" />
+        <title> Create a TF2 server | Arthur Knowledge Base</title>
+        <meta name="description" content="Create a TF2 server - Arthur Knowledge Base">
+        <meta itemprop="name" content="Create a TF2 server">
+        <meta itemprop="description" content="Create a TF2 server - Arthur Knowledge Base">
+        <meta property="og:title" content="Create a TF2 server">
+        <meta property="og:description" content="Create a TF2 server - Arthur Knowledge Base">
+        <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+        <meta property="og:url" content="https://kb.api-d.com/en/article/creer-un-serveur-tf2/create-a-tf2-server/">
+        <meta property="og:site_name" content="Arthur Knowledge Base">
+        <meta property="og:type" content="article">
+        <link rel="icon" type="image/png" href="https://kb.api-d.com/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="https://kb.api-d.com/favicon-16x16.png" sizes="16x16">
+
+	
+
+        <link rel="stylesheet" href="https://kb.api-d.com/dist/theme.css">
+
+        
+
+        
+            
+                <link rel="stylesheet" href="https://kb.api-d.com/css/variables.css">
+            
+        
+    </head>
+    <body class="bilberry-hugo-theme">
+        
+<nav>
+
+    <div class="container">
+        <ul class="topnav">
+            
+        </ul>
+
+        
+    </div>
+</nav>
+
+
+        <header>
+    <div class="container">
+        <div class="logo">
+            <a href="/en" class="logo">
+                
+                    <img src="/en/img/profile.png" alt="">
+                
+
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title"><a href="/en">Arthur Knowledge Base</a></h3>
+            
+                <span class="subtitle">Memory, Tutorials, Useful snippets and more</span>
+            
+        </div>
+
+    <div class="languages">
+                
+                    
+                        <a href="/fr">fr</a>
+                    
+                
+                    
+                        <a href="/en" class="active">en</a>
+                    
+                
+            </div>
+        
+
+        
+        <div class="toggler">
+        
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </div>
+</header>
+
+
+        <div class="main container">
+            
+     
+    <div class="article-wrapper u-cf single">
+        
+            <a class="bubble" href="/en/article/creer-un-serveur-tf2/create-a-tf2-server/">
+    <i class="fa fa-fw fa-pencil"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h3><a href="/en/article/creer-un-serveur-tf2/create-a-tf2-server/">Create a TF2 server</a></h3>
+    <div class="meta">
+        
+            <span class="date moment">2018-07-24</span>
+        
+
+        
+            <span class="categories">
+                
+                    <a href="/en/categories/tf2">TF2</a>
+                
+                    <a href="/en/categories/linux">Linux</a>
+                
+                    <a href="/en/categories/server">Server</a>
+                
+            </span>
+        
+
+        
+    </div>
+
+    
+        <p>TF2 is a fun game I&rsquo;d like people to play on. Unfortunately, it&rsquo;s not as easy to set up a TF2 server (compared to, IE, a minecraft server), but I did the work for you with this tutorial :).</p>
+
+<p>
+I assume you are using Ubuntu 18.04 (latest LTS at the time of writing).</p>
+
+<p>As usual, fill the variable box down here to personalize the tutorial for you. The values aren&rsquo;t stored anywhere, so you can be sure anything you put there is private.</p>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="/css/variables.css">
+
+<script>
+    $( document ).ready(function() {
+
+        $(".variable_box").each(function() {
+            add_spans_in_variable_box($(this)[0]);
+        });
+
+        const inputs = $("#params input");
+
+        
+        inputs.each(function() {
+            const value = $(this).val();
+            const name = $(this).attr("name");
+            update_variables(name, value)
+        });
+
+
+        
+        inputs.keyup(function() {
+            const value = $(this).val();
+            const name = $(this).attr("name");
+            update_variables(name, value)
+        });
+
+    });
+
+    function update_variables(name, value) {
+        
+        $('.variable').filter('[data-macro="' + name +'"]').each(
+            function( index ) {
+
+                if ($(this).hasClass("code")) {
+                    hljs.highlightBlock($(this));
+                }
+
+                
+                $(this).text(value);
+
+
+            }
+        )
+    }
+
+    function add_spans_in_variable_box(box) {
+        const inputs = $("#params input");
+        
+
+        inputs.each(function() {
+            const value = $(this).val();
+            const name = $(this).attr("name");
+
+            
+
+            const by = '<span data-macro="' + name + '" class="variable">' + value + '</span>';
+            
+            const before = box.innerHTML;
+            const after = before.split("§§" + name + "§§").join(by);
+            
+
+            box.innerHTML = after;
+        })
+    }
+
+
+
+
+</script>
+
+<h2>Customize this post</h2>
+<form id="params" name="params" target="" method="GET">
+    
+
+<div class="question">
+    <input type="text" value="tf.api-d.com" name="dns"><br>
+    <label for="dns">Your TF2 server domain name</label>
+</div>
+<div class="question">
+    <input type="text" value="user" name="tf2server"><br>
+    <label for="tf2server">User that will be created and will own the tf2 server files</label>
+</div>
+
+
+    <span style="text-align: right; font-size: 8px; float:right">The form values are not saved, refresh the page to reset them</span>
+</form>
+<br>
+
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>If you want to proceed with the server installation, you&rsquo;ll need :</p>
+
+<ul>
+<li><p>A VPS or a linux (ubuntu) box to run the bot. You can get them for cheap at ScaleWay (a START1-M or L will do just fine, depending on the guild count) or DigitalOcean, but you <strong>can&rsquo;t get them for free</strong>
+I used a <code>VPS - GAME1</code> from <a href="https://www.hostmyservers.fr">HostMyServers</a>, since they make affordable 5gHz VPSand are located in France (closer to me in the network point of view)</p></li>
+
+<li><p>An internet connection</p></li>
+
+<li><p>A basic understanding of terminal and SQL</p></li>
+
+<li><p>A steam account</p></li>
+
+<li><p>Optional, but recommended : a domain name. I use Gandi for that, but you can use anyone that sells domains names.</p></li>
+</ul>
+
+<p>That&rsquo;s alright ? Let&rsquo;s get started!</p>
+
+<h2 id="server-setup">Server setup</h2>
+
+<p>Login to your server using SSH
+
+<pre><code class="variable_box bash" style="overflow: auto">ssh &#39;root@$$dns$$&#34;&#39;</code></pre></p>
+
+<p>Update everything on the server to start cleanly.</p>
+
+
+<pre><code class="variable_box bash" style="overflow: auto">apt update &amp;&amp; apt dist-upgrade -y</code></pre>
+
+<p>Install a web server (apache2), a SQL database (mysql-server + mysql-client) and PhpMyAdmin to administrate the Database.</p>
+
+
+<pre><code class="variable_box bash" style="overflow: auto">apt install -y apache2 mysql-server mysql-client phpmyadmin</code></pre>
+
+<p>When requested, select apache2 with space then use tab to select the OK button</p>
+
+<p>Choose yes when asking to configure the database with dbconfig-common</p>
+
+<p>The password will be root, repeat two times.</p>
+
+<p>Prepare the server by installing LGSM prerequisites :</p>
+
+
+<pre><code class="variable_box bash" style="overflow: auto">dpkg --add-architecture i386; apt update; apt install -y mailutils postfix curl wget file bzip2 gzip unzip bsdmainutils python util-linux ca-certificates binutils bc jq tmux lib32gcc1 libstdc&#43;&#43;6 libstdc&#43;&#43;6:i386 libcurl4-gnutls-dev:i386 libtcmalloc-minimal4:i386</code></pre>
+
+<p>When prompted, you want a local site with a FQDN of <code class="variable_box none"></code></p>
+
+<p>Install some more TF2 server prerequisites:</p>
+
+
+<pre><code class="variable_box bash" style="overflow: auto">apt install -y gdb lib32tinfo5</code></pre>
+
+<p>Cleanup behind ourselves :</p>
+
+
+<pre><code class="variable_box bash" style="overflow: auto">apt autoremove</code></pre>
+
+<h2 id="create-the-tf2-server-user">Create the TF2 server user</h2>
+
+<p>Once done, create the user with
+<code class="variable_box none">adduser §§user§§</code></p>
+
+<p>Enter a secure, random password that will not show up when you type. Press enter at every prompt.</p>
+
+<p>Login as the user with</p>
+
+
+<pre><code class="variable_box none" style="overflow: auto">su - §§user§§</code></pre>
+
+<h2 id="install-lgsm">Install LGSM</h2>
+
+<p>Linux Game Server manager provide a simple command to install itself
+
+<pre><code class="variable_box none" style="overflow: auto">wget -O linuxgsm.sh https://linuxgsm.sh &amp;&amp; chmod &#43;x linuxgsm.sh &amp;&amp; bash linuxgsm.sh tf2server</code></pre></p>
+
+<p>Then, type, as requested,
+
+<pre><code class="variable_box none" style="overflow: auto">./tf2server install</code></pre></p>
+
+<p>Press enter when asked for the server directory (it should already be <code class="variable_box none">/home/{{user}}</code>)</p>
+
+<p>The install should proceed, press enter when asked if it completed successfully.</p>
+
+<h2 id="get-the-gslt-token">Get the GSLT token</h2>
+
+<p>Go to <a href="https://steamcommunity.com/dev/managegameservers">this webpage</a>, ensured you are logged in, and create a new token (game number will be 440, use a memo like &lsquo;My TF2 server&rsquo;)</p>
+
+<p>Copy your token and paste it into the prompt when asked, the press enter.</p>
+
+<h2 id="start-the-server">Start the server</h2>
+
+<p>Type <code class="variable_box bash">./tf2server start</code> to start the server for the first time</p>
+
+<p>Type <code class="variable_box bash">./tf2server console</code> to view the server console.
+Wait until the server is started (You&rsquo;ll see a message like &ldquo;Server is hibernating&rdquo;)</p>
+
+<p>Exit the console with CTRL-B and then type D</p>
+
+<h2 id="stop-the-server">Stop the server</h2>
+
+<p>Type <code class="variable_box bash">./tf2server stop</code> to stop the server now that the files have been created.</p>
+
+<h2 id="install-mods">Install mods</h2>
+
+<h3 id="install-metamod">Install metamod</h3>
+
+<p>Install metamod (required by sourcemod) by typing <code class="variable_box bash">./tf2server mi</code>, then metamod</p>
+
+<h3 id="install-sourcemod">Install sourcemod</h3>
+
+<p>Repeat the process with Sourcemod, by typing <code class="variable_box bash">./tf2server mi</code>, then sourcemod</p>
+
+<h3 id="enable-fastdl">Enable fastdl</h3>
+
+<p>Enable fastDl using the following command <code class="variable_box bash">./tf2server fastdl</code></p>
+
+<p>Type Y, this is gonna take a long time.</p>
+
+<p>You can and should re-run this command each time you update a map or something the clients have to download.</p>
+
+<h3 id="update-the-tf2server-config">Update the tf2server config</h3>
+
+<p>Open the config file with <code class="variable_box bash">nano ./serverfiles/tf/cfg/tf2server.cfg</code> and add at the end</p>
+
+
+<pre><code class="variable_box none" style="overflow: auto">// FastDL
+sv_downloadurl &#34;http://§§dns§§/fastdl&#34;
+sv_allowdownload 0</code></pre>
+
+<h3 id="update-the-apache2-config">Update the apache2 config</h3>
+
+<p>Create a new fastdl file with (as root, open a new terminal if needed) <code class="variable_box bash">nano /etc/apache2/sites-available/§§dns§§.conf</code></p>
+
+
+<pre><code class="variable_box apache2" style="overflow: auto">&lt;VirtualHost *:80&gt;
+        ServerName §§dns§§
+        ServerAlias §§dns§§
+        DocumentRoot /home/§§user§§/public_html
+        &lt;Directory /home/§§user§§/public_html&gt;
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Require all granted
+        &lt;/Directory&gt;
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        # Possible values include: debug, info, notice, warn, error, crit, alert, emerg.
+        LogLevel warn
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+&lt;/VirtualHost&gt;</code></pre>
+
+<p>And then, type <code class="variable_box bash">a2ensite §§dns§§.conf &amp;&amp; systemctl reload apache2</code> to enable the config you created.</p>
+
+<h2 id="make-the-server-start-on-boot-and-also-update-it-every-so-often">Make the server start on boot, and also update it every so often</h2>
+
+<p>Type <code class="variable_box bash">crontab -e</code> and add in the file the following line</p>
+
+
+<pre><code class="variable_box crontab" style="overflow: auto">@reboot /home/§§user§§/tf2server monitor &gt; /dev/null 2&gt;&amp;1
+*/5 * * * *  /home/§§user§§/tf2server monitor &gt; /dev/null 2&gt;&amp;1
+@hourly /home/§§user§§/tf2server update &gt; /dev/null 2&gt;&amp;1
+30 0 * * * /home/§§user§§/tf2server update-lgsm &gt; /dev/null 2&gt;&amp;1 &amp;&amp; /home/§§user§§/tf2server force-update &gt; /dev/null 2&gt;&amp;1</code></pre>
+    
+</div>
+
+    
+<div class="footer no-tags">
+
+
+    
+
+    
+    <div class="languages">
+        <i class="fa fa-language"></i>
+        <div class="links">
+            
+                <a href="https://kb.api-d.com/fr/article/creer-un-serveur-tf2/">fr</a>
+            
+        </div>
+    </div>
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+        
+    
+
+     
+
+        </div>
+
+        
+<footer>
+    <div class="container">
+
+        
+        <div class="recent-posts">
+            <strong>Latest posts</strong>
+                <ul>
+                
+                    <li>
+                        <a href="/en/article/creer-un-serveur-tf2/create-a-tf2-server/">Create a TF2 server</a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/code/duckhunt-how-to/">How to install DuckHunt and DuckHunt community on your server</a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/code/duckenigma-how-to/">How to install and create enigmas for a fork of DuckEnigma</a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/article/afficher-un-traceroute-sur-une-carte/display-traceroute-on-a-map/">Display a traceroute on a map</a>
+                    </li>
+                
+                </ul>
+        </div>
+        
+
+        
+        <div class="categories">
+            <a href="/en/categories/"><strong>Categories</strong></a>
+                <ul>
+                
+                    <li>
+                        <a href="/en/categories/linux">Linux (4)</a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/categories/tutorials">Tutorials (2)</a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/categories/mac-os">Mac os (1)</a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/categories/server">Server (1)</a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/categories/terminal">Terminal (1)</a>
+                    </li>
+                
+                    <li>
+                        <a href="/en/categories/tf2">Tf2 (1)</a>
+                    </li>
+                
+            </ul>
+        </div>
+        
+
+        <div class="right">
+            
+            <div class="external-profiles">
+                <strong>Social media</strong>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    <a href="https://github.com/paris-ci" target="_blank"><i class="fa fa-github"></i></a>
+                
+                
+            </div>
+            
+
+            <div class="languages">
+                    <strong>Other languages</strong>
+                    
+                        
+                            <a href="/fr">fr</a>
+                        
+                    
+                        
+                            <a href="/en" class="active">en</a>
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="https://github.com/paris-ci" target="_blank">
+                &copy;
+                
+                    2018
+                
+                by Arthur
+            </a>
+	    -
+	    
+        </div>
+        <div class="author">
+            <a href="https://github.com/paris-ci/knowledge" target="_blank">Arthur KB</a>
+        </div>
+    </div>
+</div>
+
+
+        
+
+        
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+</script>
+
+        
+
+        <script src="https://kb.api-d.com/dist/theme.js" type="application/javascript"></script>
+
+        
+            
+        
+
+        <script>
+            $(document).ready(function() {
+                $(".moment").each(function() {
+                    $(this).text(
+                        moment( $(this).text() )
+                            .locale( "en" )
+                            .format('LL')
+                    );
+                });
+
+                $(".footnote-return sup").html("[return]")
+            })
+        </script>
+
+        
+
+
+    </body>
+</html>

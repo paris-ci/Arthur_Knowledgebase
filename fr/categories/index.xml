@@ -12,7 +12,7 @@
     <item>
       <title>Linux</title>
       <link>https://kb.api-d.com/fr/categories/linux/</link>
-      <pubDate>Mon, 16 Jul 2018 12:26:13 +0200</pubDate>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 +0200</pubDate>
       
       <guid>https://kb.api-d.com/fr/categories/linux/</guid>
       <description></description>
@@ -28,11 +28,29 @@
     </item>
     
     <item>
+      <title>Serveur</title>
+      <link>https://kb.api-d.com/fr/categories/serveur/</link>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/categories/serveur/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Terminal</title>
       <link>https://kb.api-d.com/fr/categories/terminal/</link>
       <pubDate>Wed, 13 Jun 2018 00:19:17 +0200</pubDate>
       
       <guid>https://kb.api-d.com/fr/categories/terminal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tf2</title>
+      <link>https://kb.api-d.com/fr/categories/tf2/</link>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/categories/tf2/</guid>
       <description></description>
     </item>
     

@@ -5,10 +5,19 @@
     <link>https://kb.api-d.com/fr/article/</link>
     <description>Recent content in Articles on Arthur Knowledge Base</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 13 Jun 2018 10:12:17 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 24 Jul 2018 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://kb.api-d.com/fr/article/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Creer un serveur TF2</title>
+      <link>https://kb.api-d.com/fr/article/creer-un-serveur-tf2/</link>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/article/creer-un-serveur-tf2/</guid>
+      <description>Désolé, cet article n&amp;rsquo;est pour l&amp;rsquo;instant pas disponible en français. Aidez-moi à le traduire!</description>
+    </item>
     
     <item>
       <title>Lancer Un Processus Au Démarrage</title>
