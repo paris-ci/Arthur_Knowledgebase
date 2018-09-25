@@ -237,7 +237,7 @@ I assume you are using Ubuntu 18.04 (latest LTS at the time of writing).</p>
 <li>A VPS or a linux (ubuntu) box to run the bot. You can get them for cheap at ScaleWay (a START1-M or L will do just fine, depending on the guild count) or DigitalOcean, but you <strong>can&rsquo;t get them for free</strong></li>
 </ul>
 
-<p>I used a VPS - GAME1 from <a href="https://www.hostmyservers.fr">HostMyServers</a>, since they make affordable 5gHz VPSand are located in France (closer to me in the network point of view)</p>
+<p>I used a VPS - GAME1 from <a href="https://www.hostmyservers.fr">HostMyServers</a>, since they make affordable 5GHz VPS and are located in France (closer to me in the network point of view)</p>
 
 <ul>
 <li>An internet connection</li>
@@ -275,7 +275,7 @@ I assume you are using Ubuntu 18.04 (latest LTS at the time of writing).</p>
 
 <pre><code class="variable_box bash" style="overflow: auto">dpkg --add-architecture i386; apt update; apt install -y mailutils postfix curl wget file bzip2 gzip unzip bsdmainutils python util-linux ca-certificates binutils bc jq tmux lib32gcc1 libstdc&#43;&#43;6 libstdc&#43;&#43;6:i386 libcurl4-gnutls-dev:i386 libtcmalloc-minimal4:i386</code></pre>
 
-<p>When prompted, you want a local site with a FQDN of <code class="variable_box none"></code></p>
+<p>When prompted, you want a local site with a FQDN of <code class="variable_box none">§§dns§§</code></p>
 
 <p>Install some more TF2 server prerequisites:</p>
 
@@ -390,6 +390,11 @@ sv_allowdownload 0</code></pre>
 */5 * * * *  /home/§§user§§/tf2server monitor &gt; /dev/null 2&gt;&amp;1
 @hourly /home/§§user§§/tf2server update &gt; /dev/null 2&gt;&amp;1
 30 0 * * * /home/§§user§§/tf2server update-lgsm &gt; /dev/null 2&gt;&amp;1 &amp;&amp; /home/§§user§§/tf2server force-update &gt; /dev/null 2&gt;&amp;1</code></pre>
+
+<h2 id="how-to-install-a-plugin">How to install a plugin</h2>
+
+<p>This a a kinda optional part, but I bet everyone will want to follow it, so here we go
+We&rsquo;ll take <a href="https://forums.alliedmods.net/showthread.php?t=278579">this plugin</a> as the one we would like to install, please adapt the instructions with your own plugins.</p>
     
 </div>
 
