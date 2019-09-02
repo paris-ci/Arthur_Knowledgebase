@@ -410,9 +410,109 @@ il peut etre intéressant de vérifier si vous utilisez encore celui-ci, ou si i
 
 <p></p>
 
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="/css/variables.css">
+
+<script>
+    $( document ).ready(function() {
+
+        $(".variable_box").each(function() {
+            add_spans_in_variable_box($(this)[0]);
+        });
+
+        const inputs = $("#params input");
+
         
-            <a href="/fr/article/afficher-un-traceroute-sur-une-carte/" class="more">continuer la lecture</a>
+        inputs.each(function() {
+            const value = $(this).val();
+            const name = $(this).attr("name");
+            update_variables(name, value)
+        });
+
+
         
+        inputs.keyup(function() {
+            const value = $(this).val();
+            const name = $(this).attr("name");
+            update_variables(name, value)
+        });
+
+    });
+
+    function update_variables(name, value) {
+        
+        $('.variable').filter('[data-macro="' + name +'"]').each(
+            function( index ) {
+
+                if ($(this).hasClass("code")) {
+                    hljs.highlightBlock($(this));
+                }
+
+                
+                $(this).text(value);
+
+
+            }
+        )
+    }
+
+    function add_spans_in_variable_box(box) {
+        const inputs = $("#params input");
+        
+
+        inputs.each(function() {
+            const value = $(this).val();
+            const name = $(this).attr("name");
+
+            
+
+            const by = '<span data-macro="' + name + '" class="variable">' + value + '</span>';
+            
+            const before = box.innerHTML;
+            const after = before.split("§§" + name + "§§").join(by);
+            
+
+            box.innerHTML = after;
+        })
+    }
+
+
+
+
+</script>
+
+<h2>Personalisez l&#39;article</h2>
+<form id="params" name="params" target="" method="GET">
+    
+
+<div class="question">
+    <input type="text" value="google.fr" name="ip"><br>
+    <label for="ip">Nom de domaine ou IP vers lequel effectuer le traceroute</label>
+</div>
+<div class="question">
+    <input type="text" value="open" name="open_cmd"><br>
+    <label for="open_cmd">Commande pour ouvrir une page web sur votre machine</label>
+</div>
+
+
+    <span style="text-align: right; font-size: 8px; float:right">Les valeurs ne sont pas sauvegardées, rafraichissez la page pour réinitialiser le formulaire</span>
+</form>
+<br>
+
+
+<p>
+<pre><code class="variable_box bash" style="overflow: auto">§§open_cmd§§ &#34;http://stefansundin.github.io/traceroute-mapper/?trace=$(traceroute -q1 §§ip§§)&#34;</code></pre></p>
     
 </div>
 
