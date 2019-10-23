@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Réseau on Arthur Knowledge Base</title>
+    <link>https://kb.api-d.com/fr/categories/r%C3%A9seau/</link>
+    <description>Recent content in Réseau on Arthur Knowledge Base</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 23 Oct 2019 00:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://kb.api-d.com/fr/categories/r%C3%A9seau/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ouvrir ports et obtenir une IP statique en 4G</title>
+      <link>https://kb.api-d.com/fr/article/ouvrir-ports-et-ip-statique-en-4g/ouvrir-ports-et-ip-statique-en-4g/</link>
+      <pubDate>Wed, 23 Oct 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/article/ouvrir-ports-et-ip-statique-en-4g/ouvrir-ports-et-ip-statique-en-4g/</guid>
+      <description>&lt;p&gt;Ce tutoriel devrait vous permettre soit&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;D&amp;rsquo;ouvrir vos ports en 4G et d&amp;rsquo;obtenir une IP statique par la meme occasion&lt;/li&gt;
+&lt;li&gt;Et possiblement de fusionner des connexions afin d&amp;rsquo;en sommer la vitesse&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pour cela, nous allons utiliser l&amp;rsquo;excellent OpenMPTCProuter.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

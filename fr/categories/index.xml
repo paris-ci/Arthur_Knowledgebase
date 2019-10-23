@@ -12,7 +12,7 @@
     <item>
       <title>Linux</title>
       <link>https://kb.api-d.com/fr/categories/linux/</link>
-      <pubDate>Tue, 24 Jul 2018 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 23 Oct 2019 00:00:00 +0200</pubDate>
       
       <guid>https://kb.api-d.com/fr/categories/linux/</guid>
       <description></description>
@@ -24,6 +24,24 @@
       <pubDate>Wed, 13 Jun 2018 00:19:17 +0200</pubDate>
       
       <guid>https://kb.api-d.com/fr/categories/mac-os/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Routeur 4g</title>
+      <link>https://kb.api-d.com/fr/categories/routeur-4g/</link>
+      <pubDate>Wed, 23 Oct 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/categories/routeur-4g/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Réseau</title>
+      <link>https://kb.api-d.com/fr/categories/r%C3%A9seau/</link>
+      <pubDate>Wed, 23 Oct 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://kb.api-d.com/fr/categories/r%C3%A9seau/</guid>
       <description></description>
     </item>
     

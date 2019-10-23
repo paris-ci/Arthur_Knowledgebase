@@ -7,14 +7,14 @@
         <meta name="description" content="Arthur Knowledge Base">
         <meta name="keywords" content="personal, knowledge base, dynamic, responsive, code, tech">
         <meta name="generator" content="Hugo 0.44" />
-        <title> Creer un serveur TF2 | Arthur Knowledge Base</title>
-        <meta name="description" content="Creer un serveur TF2 - Arthur Knowledge Base">
-        <meta itemprop="name" content="Creer un serveur TF2">
-        <meta itemprop="description" content="Creer un serveur TF2 - Arthur Knowledge Base">
-        <meta property="og:title" content="Creer un serveur TF2">
-        <meta property="og:description" content="Creer un serveur TF2 - Arthur Knowledge Base">
+        <title> Ouvrir ports et obtenir une IP statique en 4G | Arthur Knowledge Base</title>
+        <meta name="description" content="Ouvrir ports et obtenir une IP statique en 4G - Arthur Knowledge Base">
+        <meta itemprop="name" content="Ouvrir ports et obtenir une IP statique en 4G">
+        <meta itemprop="description" content="Ouvrir ports et obtenir une IP statique en 4G - Arthur Knowledge Base">
+        <meta property="og:title" content="Ouvrir ports et obtenir une IP statique en 4G">
+        <meta property="og:description" content="Ouvrir ports et obtenir une IP statique en 4G - Arthur Knowledge Base">
         <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-        <meta property="og:url" content="https://kb.api-d.com/fr/article/creer-un-serveur-tf2/">
+        <meta property="og:url" content="https://kb.api-d.com/fr/article/ouvrir-ports-et-ip-statique-en-4g/ouvrir-ports-et-ip-statique-en-4g/">
         <meta property="og:site_name" content="Arthur Knowledge Base">
         <meta property="og:type" content="article">
         <link rel="icon" type="image/png" href="https://kb.api-d.com/favicon-32x32.png" sizes="32x32">
@@ -95,7 +95,7 @@
      
     <div class="article-wrapper u-cf single">
         
-            <a class="bubble" href="/fr/article/creer-un-serveur-tf2/">
+            <a class="bubble" href="/fr/article/ouvrir-ports-et-ip-statique-en-4g/ouvrir-ports-et-ip-statique-en-4g/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -103,20 +103,20 @@
     
 
     <div class="content">
-    <h3><a href="/fr/article/creer-un-serveur-tf2/">Creer un serveur TF2</a></h3>
+    <h3><a href="/fr/article/ouvrir-ports-et-ip-statique-en-4g/ouvrir-ports-et-ip-statique-en-4g/">Ouvrir ports et obtenir une IP statique en 4G</a></h3>
     <div class="meta">
         
-            <span class="date moment">2018-07-24</span>
+            <span class="date moment">2019-10-23</span>
         
 
         
             <span class="categories">
                 
-                    <a href="/fr/categories/tf2">TF2</a>
+                    <a href="/fr/categories/routeur-4g">Routeur 4G</a>
+                
+                    <a href="/fr/categories/r%C3%A9seau">Réseau</a>
                 
                     <a href="/fr/categories/linux">Linux</a>
-                
-                    <a href="/fr/categories/serveur">Serveur</a>
                 
             </span>
         
@@ -125,8 +125,159 @@
     </div>
 
     
-        <p>Désolé, cet article n&rsquo;est pour l&rsquo;instant pas disponible en français. Aidez-moi à le traduire!</p>
+        <p>Ce tutoriel devrait vous permettre soit</p>
 
+<ul>
+<li>D&rsquo;ouvrir vos ports en 4G et d&rsquo;obtenir une IP statique par la meme occasion</li>
+<li>Et possiblement de fusionner des connexions afin d&rsquo;en sommer la vitesse</li>
+</ul>
+
+<p>Pour cela, nous allons utiliser l&rsquo;excellent OpenMPTCProuter.</p>
+
+<p></p>
+
+<p>Il est indispensable pour ce tutoriel de disposer d&rsquo;un VPS sous Ubuntu 18.04. Je vous conseille un VPS-DEV-S (a 2€99 chez ScaleWay), mais n&rsquo;importe lequel devrait faire l&rsquo;affaire.</p>
+
+<p>Il vous faudra aussi disposer de</p>
+
+<ul>
+<li>Un Raspberry Pi (2B ou plus récent - Testé avec un 4)</li>
+<li>Une carte micro SD (1Go ou plus), et son lecteur pour le brancher à votre ordinateur.</li>
+<li><a href="https://www.balena.io/etcher/">Balena Etcher</a> pour graver les images sur la carte SD</li>
+<li>Une Box internet et/ou un routeur 4G</li>
+</ul>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="/css/variables.css">
+
+<script>
+    $( document ).ready(function() {
+
+        $(".variable_box").each(function() {
+            add_spans_in_variable_box($(this)[0]);
+        });
+
+        const inputs = $("#params input");
+
+        
+        inputs.each(function() {
+            const value = $(this).val();
+            const name = $(this).attr("name");
+            update_variables(name, value)
+        });
+
+
+        
+        inputs.keyup(function() {
+            const value = $(this).val();
+            const name = $(this).attr("name");
+            update_variables(name, value)
+        });
+
+    });
+
+    function update_variables(name, value) {
+        
+        $('.variable').filter('[data-macro="' + name +'"]').each(
+            function( index ) {
+
+                if ($(this).hasClass("code")) {
+                    hljs.highlightBlock($(this));
+                }
+
+                
+                $(this).text(value);
+
+
+            }
+        )
+    }
+
+    function add_spans_in_variable_box(box) {
+        const inputs = $("#params input");
+        
+
+        inputs.each(function() {
+            const value = $(this).val();
+            const name = $(this).attr("name");
+
+            
+
+            const by = '<span data-macro="' + name + '" class="variable">' + value + '</span>';
+            
+            const before = box.innerHTML;
+            const after = before.split("§§" + name + "§§").join(by);
+            
+
+            box.innerHTML = after;
+        })
+    }
+
+
+
+
+</script>
+
+<h2>Personalisez l&#39;article</h2>
+<form id="params" name="params" target="" method="GET">
+    
+
+<div class="question">
+    <input type="text" value="1.1.1.1" name="vps_ip"><br>
+    <label for="vps_ip">IP de votre VPS</label>
+</div>
+<div class="question">
+    <input type="text" value="192.168.1.1" name="box_ip"><br>
+    <label for="box_ip">IP de votre BOX</label>
+</div>
+
+
+    <span style="text-align: right; font-size: 8px; float:right">Les valeurs ne sont pas sauvegardées, rafraichissez la page pour réinitialiser le formulaire</span>
+</form>
+<br>
+
+
+<p>Commencer par commender votre VPS. Une fois livré, utilisez votre client SSH préféré pour vous connecter dans le serveur :</p>
+
+
+<pre><code class="variable_box bash" style="overflow: auto">ssh §§vps_ip§§ &#34;wget http://www.openmptcprouter.com/server/ubuntu18.04-x86_64.sh; sudo sh ubuntu18.04-x86_64.sh&#34;</code></pre>
+
+<p>Ca devrait tourner pendant une petite dizaine de minutes.
+Pendant ce temps, téléchargez <a href="https://www.openmptcprouter.com/download">ici</a> l&rsquo;image correspondant à votre PI. Choissisez une image factory en ext4 32 bits.</p>
+
+<p>Utilisez Etcher pour graver l&rsquo;image sur la carte micro SD.</p>
+
+<p><strong>Attention, il est possible que les étapes suivantes coupent votre connexion internet.</strong></p>
+
+<p>Pensez à télécharger les élèments dont vous auriez besoin, tels que le manuel de votre routeur. Vérifiez aussi que la commande SSH c&rsquo;est bien terminée et sauvegardez la clé affichée.</p>
+
+<p>À l&rsquo;aide de votre ordinateur, connectez vous à votre box/routeur 4G. Prenez note de son adresse IP locale, et vérifiez qu&rsquo;elle n&rsquo;est pas en 192.168.100.X. Si c&rsquo;est le cas, changez le 100 en 1.</p>
+
+<p>Désactivez le serveur DHCP de votre box, puis redémarrez.</p>
+
+<p>Connectez votre RPI à la box, branchez la carte micro SD et l&rsquo;alimentation, démarrez le.</p>
+
+<p>Branchez votre ordinateur ou connectez le de nouveau au WiFi. Normalement, il devrait récuperer une IP locale en 192.168.100.XXX.</p>
+
+<p>Connectez-vous sur le <a href="http://192.168.100.1/">panneau d&rsquo;administration de OpenMPTCProuter</a>.</p>
+
+<p>Dans l&rsquo;onglet Systeme, ouvrez l&rsquo;assitant de configuration, et placez-y la clé de configuration qui à été affichée à la fin de l&rsquo;execution de la commande SSH.
+Placez-y aussi l&rsquo;IP de votre VPS, <span class="variable_box">§§vps_ip§§</span>, et configurez l&rsquo;IP de votre box/routeur 4G <span class="variable_box">§§box_ip§§</span></p>
+
+<p>C&rsquo;est fini! Redemarrez vos appareils et ils devraient automatiquement utiliser la nouvelle connexion et etre assignés une IP locale en 192.168.100.XXX.</p>
+
+<p>Pour l&rsquo;ouverture de ports, rendez-vous dans les parametres réseau de OpenMPTCProuter!</p>
     
 </div>
 
@@ -141,7 +292,7 @@
         <i class="fa fa-language"></i>
         <div class="links">
             
-                <a href="https://kb.api-d.com/en/article/creer-un-serveur-tf2/create-a-tf2-server/">en</a>
+                <a href="https://kb.api-d.com/en/article/ouvrir-ports-et-ip-statique-en-4g/open-ports-and-static-ip-over-4g/">en</a>
             
         </div>
     </div>

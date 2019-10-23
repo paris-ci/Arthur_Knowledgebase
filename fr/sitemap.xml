@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kb.api-d.com/fr/article/ouvrir-ports-et-ip-statique-en-4g/ouvrir-ports-et-ip-statique-en-4g/</loc>
+    <lastmod>2019-10-23T00:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kb.api-d.com/en/article/ouvrir-ports-et-ip-statique-en-4g/open-ports-and-static-ip-over-4g/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kb.api-d.com/fr/article/ouvrir-ports-et-ip-statique-en-4g/ouvrir-ports-et-ip-statique-en-4g/"
+                />
+  </url>
+  
+  <url>
     <loc>https://kb.api-d.com/fr/article/creer-un-serveur-tf2/</loc>
     <lastmod>2018-07-24T00:00:00+02:00</lastmod>
     <xhtml:link
@@ -99,7 +114,7 @@
   
   <url>
     <loc>https://kb.api-d.com/fr/</loc>
-    <lastmod>2018-07-24T00:00:00+02:00</lastmod>
+    <lastmod>2019-10-23T00:00:00+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -115,7 +130,7 @@
   
   <url>
     <loc>https://kb.api-d.com/fr/article/</loc>
-    <lastmod>2018-07-24T00:00:00+02:00</lastmod>
+    <lastmod>2019-10-23T00:00:00+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -177,7 +192,7 @@
   
   <url>
     <loc>https://kb.api-d.com/fr/categories/linux/</loc>
-    <lastmod>2018-07-24T00:00:00+02:00</lastmod>
+    <lastmod>2019-10-23T00:00:00+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -210,6 +225,18 @@
   <url>
     <loc>https://kb.api-d.com/fr/page/</loc>
     <lastmod>2018-01-01T00:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/categories/routeur-4g/</loc>
+    <lastmod>2019-10-23T00:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kb.api-d.com/fr/categories/r%C3%A9seau/</loc>
+    <lastmod>2019-10-23T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
