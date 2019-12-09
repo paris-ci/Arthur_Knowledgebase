@@ -188,157 +188,47 @@ If you want to help developing the bot, this tutorial is the official way to set
 <p>Let&rsquo;s start by a recap of what DuckHunt (<em>DH</em>), and DuckHunt-Community (<em>DHC</em>) is.
 </p>
 
-        
-            <a href="/en/code/duckhunt-how-to/" class="more">Continue reading</a>
-        
-    
-</div>
+<h2 id="what-is-duckhunt">What is DuckHunt</h2>
 
-    
-<div class="footer no-tags">
+<p>DuckHunt is a discord game bot, created following MenzAgitat own DuckHunt IRC bot. The primary goal of the game is to kill ducks.
+To make the game more fun and entertaining, a big number of commands, shop items, special ducks, have been added since the first version.</p>
 
+<p>Of course, hosting a big game across so many discord servers (<em>guilds</em>) require a great support team. The support is provided, on the
+<a href="https://discord.gg/2BksEkV">official DuckHunt Support Server</a>. To help with moderating the previous server, a custom bot has been developed : DuckHunt-Community</p>
 
-    
+<p>Both bots use the latest version of python on discord.py at the time of writing, respectively 3.6 and the rewrite branch.</p>
 
-    
-    <div class="languages">
-        <i class="fa fa-language"></i>
-        <div class="links">
-            
-                <a href="https://kb.api-d.com/fr/code/duckhunt-how-to/">fr</a>
-            
-        </div>
-    </div>
-    
-</div>
+<p>The game has been open-sourced on <a href="https://github.com/duckhunt-discord/DHV3">GitHub</a>.</p>
 
-</article>
+<h3 id="where-can-i-find-help-on-the-duckhunt-bot">Where can I find help on the DuckHunt Bot</h3>
 
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/en/code/duckenigma-how-to/">
-    <i class="fa fa-fw fa-code"></i>
-</a>
+<p>If you don&rsquo;t want to install DuckHunt, but just want to use it, <strong>you are in the wrong place</strong>. An up-to-date website with the command list, the settings,
+usage, FAQs, and the installation tutorial to get the official bot on your server are available on the <a href="https://duckhunt.me">Bot Website</a></p>
 
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/en/code/duckenigma-how-to/">How to install and create enigmas for a fork of DuckEnigma</a></h3>
-    <div class="meta">
-        
-            <span class="date moment">2018-06-14</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/en/categories/linux">Linux</a>
-                
-                    <a href="/en/categories/tutorials">Tutorials</a>
-                
-            </span>
-        
-
-        
-    </div>
-
-    
-        <p>This article is a step-by-step tutorial on how to install a fork of DuckEnigma, and create some questions.
-Let&rsquo;s start by a recap of what DuckEnigma is.
-</p>
-
-<h2 id="what-is-duckenigma">What is DuckEnigma</h2>
-
-<p>Duckenigma is a discord bot, created for an event on the DuckHunt server at first. It has been open-sourced on <a href="https://github.com/duckhunt-discord/enigma">GitHub</a> since the end of the event, and you can now use it as a template for your own event needs.</p>
-
-<h3 id="what-does-it-looks-like">What does it looks like</h3>
-
-<p>Here is what a typical talk with the bot looks like <img src="preview.png" alt="Discussion with the bot" /></p>
-
-<h3 id="what-are-the-commands">What are the commands</h3>
-
-<p>Here is the command list :</p>
-
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Default cooldown</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>-answer [your answer]</td>
-<td>10/2min</td>
-<td>Try to answer your current enigma level.</td>
-</tr>
-
-<tr>
-<td>-hint</td>
-<td>2/30min</td>
-<td>Get a random hint on your current level, if available.</td>
-</tr>
-
-<tr>
-<td>-level</td>
-<td>2/15s</td>
-<td>Show your current rank</td>
-</tr>
-
-<tr>
-<td>-info</td>
-<td>2/15s</td>
-<td>Show current level information</td>
-</tr>
-
-<tr>
-<td>(super admin only) -eval</td>
-<td>N/A</td>
-<td>Eval python code</td>
-</tr>
-
-<tr>
-<td>(super admin only) -load_cog [filename]</td>
-<td>N/A</td>
-<td>Load another cog</td>
-</tr>
-
-<tr>
-<td>(super admin only) -reload_cog [filename]</td>
-<td>N/A</td>
-<td>Reload a cog</td>
-</tr>
-
-<tr>
-<td>(super admin only) -unload_cog [filename]</td>
-<td>N/A</td>
-<td>Unload a loaded cog</td>
-</tr>
-
-<tr>
-<td>(super admin only) -exit</td>
-<td>N/A</td>
-<td>Exit the bot</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="installation">Installation</h2>
+<h2 id="prerequisites">Prerequisites</h2>
 
 <p>If you want to proceed with the bot installation, you&rsquo;ll need :</p>
 
 <ul>
-<li>A VPS or a linux (ubuntu) box to run the bot. You can get them for cheap at ScaleWay (a START1-XS will do just fine) or DigitalOcean, but you can&rsquo;t get them for free</li>
+<li>A VPS or a linux (ubuntu) box to run the bot. You can get them for cheap at ScaleWay (a START1-M or L will do just fine, depending on the guild count) or DigitalOcean, but you <strong>can&rsquo;t get them for free</strong></li>
 <li>An internet connection</li>
-<li>A basic understanding of JSON, terminal, and discord bots</li>
+<li>A basic understanding of terminal, and discord bots</li>
 <li>A discord account</li>
 </ul>
+
+<p>Additionally, the configuration used in this tutorial is as follow.</p>
+
+<ul>
+<li>A START1-M VPS bought at ScaleWay</li>
+<li>The latest ubuntu LTS version : <a href="https://wiki.ubuntu.com/BionicBeaver">Bionic Beaver</a> (18.04)</li>
+<li>IPv6 Disabled, we don&rsquo;t need it to connect to Discord.</li>
+</ul>
+
+<p>Feel free to change this configuration if needed, but you may need to adapt some parts of the tutorial.</p>
+
+<h2 id="roadmap">Roadmap</h2>
+
+<p>We&rsquo;ll start by installing dependencies to both bots, then we will fully install DuckHunt, and to finish things up DuckHunt Commmunity</p>
 
 
 <script
@@ -427,23 +317,53 @@ Let&rsquo;s start by a recap of what DuckEnigma is.
     
 
 <div class="question">
-    <input type="text" value="/home/duck_enigma" name="installation_folder"><br>
-    <label for="installation_folder">Folder where you&#39;ll install the bot</label>
+    <input type="text" value="127.0.0.1" name="server_IP"><br>
+    <label for="server_IP">IP of the server where you&#39;ll install the bots</label>
 </div>
 
 <div class="question">
-    <input type="text" value="449652231227000000" name="bot_id"><br>
-    <label for="bot_id">Bot client ID</label>
+    <input type="text" value="/home/duckhunt/DH" name="DH_installation_folder"><br>
+    <label for="DH_installation_folder">Folder where you&#39;ll install DuckHunt</label>
 </div>
 
 <div class="question">
-    <input type="text" value="XXXXXXXXXXXXXXXX.XXXXXX.XXXXXXXXXXXXXXXX" name="bot_token"><br>
-    <label for="bot_token">Your bot token (not transmitted to any server, but don&#39;t take my word for it and check the webpage code by yourself if you are not sure)</label>
+    <input type="text" value="/home/duckhunt/DHC" name="DHC_installation_folder"><br>
+    <label for="DHC_installation_folder">Folder where you&#39;ll install DuckHunt-Community</label>
 </div>
 
 <div class="question">
-    <input type="text" value="16" name="number_enigmas"><br>
-    <label for="number_enigmas">Total number of enigmas in the enigmas.json file</label>
+    <input type="text" value="duckhunt" name="DH_mysql_db_name"><br>
+    <label for="DH_mysql_db_name">Name of the DuckHunt Database</label>
+</div>
+
+<div class="question">
+    <input type="text" value="duckhunt" name="DH_mysql_db_user"><br>
+    <label for="DH_mysql_db_user">Name of the DuckHunt Database User</label>
+</div>
+
+<div class="question">
+    <input type="text" value="CHANGEME" name="DH_mysql_db_password"><br>
+    <label for="DH_mysql_db_password">Password of the DuckHunt Database User</label>
+</div>
+
+<div class="question">
+    <input type="text" value="187636089073172481" name="DH_ID"><br>
+    <label for="DH_ID">Your DuckHunt bot ID</label>
+</div>
+
+<div class="question">
+    <input type="text" value="XXXXXXXXXXXXXXXX.XXXXXX.XXXXXXXXXXXXXXXX" name="DH_token"><br>
+    <label for="DH_token">Your DuckHunt bot token (not transmitted to any server, but don&#39;t take my word for it and check the webpage code by yourself if you are not sure)</label>
+</div>
+
+<div class="question">
+    <input type="text" value="306062561021919242" name="DHC_ID"><br>
+    <label for="DHC_ID">Your DuckHunt-Community bot ID</label>
+</div>
+
+<div class="question">
+    <input type="text" value="XXXXXXXXXXXXXXXX.XXXXXX.XXXXXXXXXXXXXXXX" name="DHC_token"><br>
+    <label for="DHC_token">Your DuckHunt-Community bot token</label>
 </div>
 
 
@@ -452,252 +372,248 @@ Let&rsquo;s start by a recap of what DuckEnigma is.
 <br>
 
 
+<h2 id="installation">Installation</h2>
+
 <h3 id="dependencies">Dependencies</h3>
 
-<p>You&rsquo;ll need to download dependencies first. On a ubuntu-based linux bot, that means you should use</p>
+<p>Let&rsquo;s connect to our new server using
+
+<pre><code class="variable_box sh" style="overflow: auto">ssh root@§§server_IP§§</code></pre></p>
+
+<p>Now, let&rsquo;s get the system up-to-date and install dependencies:</p>
 
 
-<pre><code class="variable_box sh" style="overflow: auto">sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt-get update
-sudo apt-get install python3.6 python3.6-dev git screen
-curl https://bootstrap.pypa.io/get-pip.py | sudo python3.6
-pip3.6 install -U git&#43;https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]</code></pre>
+<pre><code class="variable_box sh" style="overflow: auto">apt update
+apt upgrade -y
+apt install -y apt-utils git htop screen apache2 php php-mysql python3-pip python3-dev mysql-client mysql-server libmysqlclient-dev</code></pre>
 
-<h3 id="get-the-code">Get the code</h3>
-
-<p>Change your current directory to where you want to install the bot:</p>
+<p>Create the DuckHunt User</p>
 
 
-<pre><code class="variable_box sh" style="overflow: auto">cd §§installation_folder§§</code></pre>
+<pre><code class="variable_box sh" style="overflow: auto">adduser duckhunt</code></pre>
 
-<p>Then, clone the git repo using</p>
+<p>And provide a password if asked.</p>
 
-
-<pre><code class="variable_box sh" style="overflow: auto">git clone [INSERT URL HERE] &amp;&amp; cd enigma</code></pre>
-
-<h3 id="create-a-discord-bot-account">Create a discord bot account</h3>
-
-<p>Go to <a href="https://discordapp.com/developers/applications/me">this page</a> and create a new account for the enigma bot. Don&rsquo;t forget to click on the create a bot user button, and to take not of the secret token.</p>
-
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-      
-<style type="text/css">
-
-.alert {
-  min-width: 150px;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  border-radius: 3px;
-}
-.alert-success {
-  background-color: #91cf91;
-  border-color: #80c780;
-  color: #3d8b3d;
-}
-
-.alert p {
-  padding: 0;
-  margin: 0;
-}
-.alert i {
-  padding-right: 5px;
-  vertical-align: middle;
-  font-size: 24px;
-}
-
-.shadow-1, .alert {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-.shadow-2, .alert:hover {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-</style>
-
-<div class="alert alert-success" role="alert">
-  <i class="material-icons">info</i>
-  Before reading further, you can fill the form at the top of the page to add your bot ID and token. This will generate the config files for you, without needing to reload the page.
-</div>
-
-<p>Your token is currently set to
-<code class="variable_box ">§§bot_token§§</code>
-, and your client ID is set to
-<code class="variable_box ">§§bot_id§§</code>.</p>
-
-<h3 id="create-a-credentials-json-file-for-the-bot">Create a credentials.json file for the bot</h3>
-
-<p>Use your favorite editor to create a credentials.json file in the bot root folder :</p>
+<p>Download the code of both bots in the specified directories.</p>
 
 
-<pre><code class="variable_box sh" style="overflow: auto">nano credentials.json</code></pre>
+<pre><code class="variable_box sh" style="overflow: auto">su - duckhunt
+git clone https://github.com/DuckHunt-discord/DHV3.git §§DH_installation_folder§§
+git clone https://github.com/DuckHunt-discord/DuckHunt-Community-Rewrite.git §§DHC_installation_folder§§
+exit</code></pre>
 
-<p>Add the following content in the file :</p>
+<p>Let&rsquo;s install python requirements for DuckHunt</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">cd §§DH_installation_folder§§
+pip3 install -r requirements.txt</code></pre>
+
+<h3 id="duckhunt">DuckHunt</h3>
+
+<h4 id="database">Database</h4>
+
+<p>Time have come to create the database for DuckHunt.</p>
+
+<p>Login as the root user on the DataBase:</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">mysql -u root -proot</code></pre>
+
+<p>In the MySQL prompt, to create the user and the database, write</p>
+
+
+<pre><code class="variable_box sql" style="overflow: auto">create database §§DH_mysql_db_name§§;
+grant all privileges on §§DH_mysql_db_name§§.* to &#39;§§DH_mysql_db_user§§&#39;@&#39;localhost&#39; identified by &#34;§§DH_mysql_db_password§§&#34;;
+flush privileges;
+exit;</code></pre>
+
+<p>Then, load the schema into the database.</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">mysql --database=§§DH_mysql_db_name§§ -u §§DH_mysql_db_user§§ -p§§DH_mysql_db_password§§ &lt; §§DH_installation_folder§§/schema.sql</code></pre>
+
+<h4 id="configuration">Configuration</h4>
+
+<p>Now that the database is correctly setup, give the bot the credentials to connect to discord.</p>
+
+<p>For this, create a <code>credentials.json</code> file using</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">nano §§DH_installation_folder§§/credentials.json</code></pre>
+
+<p>In this file, add the following :</p>
 
 
 <pre><code class="variable_box json" style="overflow: auto">{
-  &#34;token&#34;: &#34;§§bot_token§§&#34;
+  &#34;token&#34;: &#34;§§DH_token§§&#34;,
+  &#34;bots_discord_pw_key&#34; : &#34;&#34;,
+  &#34;discordbots_org_key&#34; : &#34;&#34;
 }</code></pre>
 
-<p>Save and exit</p>
+<p>Then, save and quit (CTRL-X + Y).</p>
 
-<h3 id="try-to-start-the-bot-optionnal">Try to start the bot (optionnal)</h3>
-
-<p>Type
-<code class="variable_box ">python3.6 ./bot.py</code>
-to run the bot. It should start up without errors.</p>
-
-<h3 id="create-a-server-for-the-bot">Create a server for the bot</h3>
-
-<p>You&rsquo;ll probably want a separate server to play with the bot. Create it now in your discord client</p>
-
-<h3 id="invite-the-bot-to-your-server">Invite the bot to your server</h3>
-
-<p>Type the following URL in your browser address bar :</p>
+<p>Open the configuration file with</p>
 
 
-<pre><code class="variable_box json" style="overflow: auto">https://discordapp.com/api/oauth2/authorize?client_id=§§bot_id§§&amp;permissions=335932480&amp;scope=bot</code></pre>
+<pre><code class="variable_box sh" style="overflow: auto">nano §§DH_installation_folder§§/cogs/helpers/config.py</code></pre>
 
-<p>Follow the instructions to add the bot to the server you just created.</p>
-
-<h3 id="edit-the-enigmas-json-file">Edit the enigmas.json file</h3>
-
-<p>The enigmas.json file, in the root directory, should already be populated with the official DuckEnigma event enigmas.</p>
-
-<p>An enigma level should look like this</p>
+<p>At least, locate the lines concerning the database settings and update them to look like this:</p>
 
 
-<pre><code class="variable_box json" style="overflow: auto">[
-  {
-    &#34;to-level&#34;   : 1,
-    &#34;comment&#34;    : &#34;They should just read what&#39;s going on, this is clearly easy&#34;,
-    &#34;question&#34;   : &#34;You wander on a deserted beach 🏖, when you hear a voice, asking you a random question. How can you answer it ?&#34;,
-    &#34;hints&#34;      : [
-      &#34;You can learn more about the game in the #how-does-this-works channel&#34;,
-      &#34;Try to learn more about the game&#34;,
-      &#34;How Does This Works ?&#34;,
-      &#34;Starting on the basics, how do I use the answer command ?&#34;
-    ],
-    &#34;answers&#34;    : [
-      &#34;hello!&#34;
-    ],
-    &#34;flags&#34;      : [
-      &#34;no-case&#34;
-    ],
-    &#34;win-message&#34;: &#34;Congratulations on your first enigma, says the voice! The game starts easy, but will become harder the more you go on. Remember to read everything, and good luck!&#34;
-  },
-  {...}
-]</code></pre>
+<pre><code class="variable_box python" style="overflow: auto"># &gt; Database settings &lt; #
+# User used to connect to the Mysql DB
+bot.database_user = &#34;§§DH_mysql_db_user§§&#34;
 
-<p>This should be pretty much self explanatory, but i&rsquo;ll explain in details what each of these fields do :</p>
+# Password for the user used to connect to the Mysql DB
+bot.database_password = &#34;§§DH_mysql_db_password§§&#34;
 
-<ul>
-<li><p>The <code class="variable_box ">&#34;to-level&#34;</code>
-and the <code class="variable_box ">&#34;comment&#34;</code>
-fields are ignored by the bot. You can insert the information you need in them freely.</p></li>
+# Name of the table used in the Mysql DB
+bot.database_name = &#34;§§DH_mysql_db_name§§&#34;</code></pre>
 
-<li><p>The <code class="variable_box ">&#34;question&#34;</code>
-field is the question that will get sent to the users.</p></li>
+<p>Of course, you can update other settings there.</p>
 
-<li><p>The <code class="variable_box ">&#34;hints&#34;</code>
-field contain a list of messages that can be sent as hints to users. You don&rsquo;t have to specify this field, but this might anger some people if you don&rsquo;t ;) Remember, the hints aren&rsquo;t displayed in order to the users but rather at random, and this means that players don&rsquo;t know :</p>
+<p>Then, save and exit (CTRL-X + Y).</p>
 
-<ul>
-<li>The number of hints, if any</li>
-<li>If they saw every hint or just had bad luck</li>
-</ul></li>
-</ul>
+<h4 id="starting">Starting</h4>
 
-<p>But, this also means that the order of the list shouldn&rsquo;t matter to you.</p>
+<p>DuckHunt should now be working \o/. To test and start it, type</p>
 
-<ul>
-<li><p>The <code class="variable_box ">&#34;answers&#34;</code>
-field is a list of accepted answers.</p></li>
 
-<li><p>The <code class="variable_box ">&#34;flags&#34;</code>
-field can contain, or not, the <code class="variable_box ">&#34;no-case&#34;</code>
-flag, and this means that players answers will be lowered before checking for equality</p></li>
-</ul>
+<pre><code class="variable_box sh" style="overflow: auto">cd §§DH_installation_folder§§ &amp;&amp; python3 ./bot.py</code></pre>
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+<h4 id="website">WebSite</h4>
 
-<style type="text/css">
+<p>Let&rsquo;s start by configuring the DB for it :</p>
 
-.alert {
-  min-width: 150px;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  border-radius: 3px;
-}
 
-.alert-warning {
-  background-color: #ebc063;
-  border-color: #e8b64c;
-  color: #a07415;
-}
+<pre><code class="variable_box sh" style="overflow: auto">nano §§DH_installation_folder§§/web/duckstats.php</code></pre>
 
-.alert p {
-  padding: 0;
-  margin: 0;
-}
-.alert i {
-  padding-right: 5px;
-  vertical-align: middle;
-  font-size: 24px;
-}
+<p>Locate the lines like this and replace them:</p>
 
-.shadow-1, .alert {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
 
-.shadow-2, .alert:hover {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-</style>
+<pre><code class="variable_box php" style="overflow: auto">$dbname   = &#34;§§DH_mysql_db_name§§&#34;;
+$username   = &#34;§§DH_mysql_db_user§§&#34;;
+$password   = &#34;§§DH_mysql_db_password§§&#34;;</code></pre>
 
-<div class="alert alert-warning" role="alert">
-  <i class="material-icons">warning</i>
-  If you use the no-case flag, you should write every answer in lowercase, or they won&#39;t match.
+<p>You can also change the server name in <code>web/live-ducks.php</code> if needed</p>
+
+<p>A simple symlink should do the trick to serve it:
+
+<pre><code class="variable_box sh" style="overflow: auto">rm -Rv /var/www/html
+ln -s §§DH_installation_folder§§/web /var/www/html </code></pre></p>
+
+<p>Finally, to save the data from the stats API periodically, open the crontab
+
+<pre><code class="variable_box sh" style="overflow: auto">su - duckhunt
+crontab -e</code></pre></p>
+
+<p>Add the following :</p>
+
+
+<pre><code class="variable_box cron" style="overflow: auto">0 * * * * cd §§DH_installation_folder§§/web ; python3 ./save_historical_to_csv.py</code></pre>
+
+<p>Exit nano as usual, and type <code>exit</code> to return to the root prompt</p>
+
+<h3 id="duckhunt-community">DuckHunt Community</h3>
+
+<p>DuckHunt Community should be really easier to install, since we don&rsquo;t require a database for it.</p>
+
+<h4 id="create-necessary-directories">Create necessary directories</h4>
+
+<p>To let DuckHunt-Community store data about bans and stuff, we&rsquo;ll need the following directory structure.
+
+<pre><code class="variable_box sh" style="overflow: auto">mkdir §§DHC_installation_folder§§/mods
+mkdir §§DHC_installation_folder§§/mods/cases
+mkdir §§DHC_installation_folder§§/mods/users
+echo &#39;1&#39; &gt; §§DHC_installation_folder§§/mods/current_case.txt
+mkdir §§DHC_installation_folder§§/users</code></pre></p>
+
+<h4 id="configuration-1">Configuration</h4>
+
+<p>Again, give the bot the credentials to connect to discord.</p>
+
+<p>For this, create a <code>credentials.json</code> file using</p>
+
+
+<pre><code class="variable_box sh" style="overflow: auto">nano §§DHC_installation_folder§§/credentials.json</code></pre>
+
+<p>In this file, add the following :</p>
+
+
+<pre><code class="variable_box json" style="overflow: auto">{
+  &#34;token&#34;: &#34;§§DHC_token§§&#34;
+}</code></pre>
+
+<h3 id="last-steps">Last Steps</h3>
+
+<h4 id="auto-restart">Auto-restart</h4>
+
+<p>You&rsquo;ll probably want the bot to restart every time it fails, or when you use the <code>dhexit</code> command. Feel free to use <a href="/fr/article/lancer-un-processus-au-demarrage/">this tutorial</a> for this.</p>
+
+<h4 id="backup-script">Backup Script</h4>
+    
 </div>
 
-<ul>
-<li>The <code class="variable_box ">&#34;win-message&#34;</code>
-is the message that will be displayed if a correct answer is given.</li>
-</ul>
-
-<h3 id="prepare-the-server">Prepare the server</h3>
-
-<p>Don&rsquo;t forget to change the number in the form if you don&rsquo;t have <span data-macro="number_enigmas" class="variable"></span> enigmas in your enigmas.json file.</p>
-
-<p>Create a log channel that will be used by the bot. The bot must be able to send messages there, but not users.</p>
-
-<p>Now, this is the boring part. Someone could probably do a script/cog to automate this part, and I&rsquo;ll gladly accept any PR for this. Anyway, you&rsquo;ll have to create a rank for each enigma: 01, 02, &hellip; <span data-macro="number_enigmas" class="variable"></span>. The last one, <span data-macro="number_enigmas" class="variable"></span>, should probably be colored or something, &lsquo;cause they are the winners.</p>
-
-<p>You&rsquo;ll also want to create two other roles, spectator and moderator, that will not be playing.</p>
-
-<p>For each of the levels, create a channel (#01, #02, &hellip; #<span data-macro="number_enigmas" class="variable"></span> with the topic set to the level question, and only accessible to the bot, the moderators, the spectators, and the corrsponding level (#01 should be accesible by role 01). Deny it to everyone else.</p>
-
-<h3 id="configure-the-bot">Configure the bot</h3>
-
-<p>Last steps! Open the bot config file at <code class="variable_box ">§§installation_folder§§/enigma/cogs/helpers/config.py</code> with your favorite editor.</p>
+    
+<div class="footer no-tags">
 
 
-<pre><code class="variable_box sh" style="overflow: auto">nano §§installation_folder§§/enigma/cogs/helpers/config.py</code></pre>
+    
 
-<p>In that file, you can set the #log channel ID (right-click on the channel with developper mode enabled -&gt; copy ID), the bot super-admin(s) ID(s) (right-click on the users with developper mode enabled -&gt; copy ID), and the blacklisted users ID, if any.</p>
+    
+    <div class="languages">
+        <i class="fa fa-language"></i>
+        <div class="links">
+            
+                <a href="https://kb.api-d.com/fr/code/duckhunt-how-to/">fr</a>
+            
+        </div>
+    </div>
+    
+</div>
 
-<h3 id="finally">Finally</h3>
+</article>
 
-<p>Try to run the bot using
-<code class="variable_box ">python3.6 ./bot.py</code>
-and see if the commands works. If yes, give yourself and your mods the moderator role, create invites, rules, stuff, and start your event</p>
+            
+        </div>
+    
+        <div class="article-wrapper u-cf">
+            
+                <a class="bubble" href="/en/code/duckenigma-how-to/">
+    <i class="fa fa-fw fa-code"></i>
+</a>
 
-<h3 id="auto-restart">Auto-restart</h3>
+<article class="default article">
+    
 
-<p>You&rsquo;ll probably want the bot to restart every time it fails, or when you use the <code>-exit</code> command. Feel free to use <a href="/fr/article/lancer-un-processus-au-demarrage/">this tutorial</a> for this.</p>
+    <div class="content">
+    <h3><a href="/en/code/duckenigma-how-to/">How to install and create enigmas for a fork of DuckEnigma</a></h3>
+    <div class="meta">
+        
+            <span class="date moment">2018-06-14</span>
+        
+
+        
+            <span class="categories">
+                
+                    <a href="/en/categories/linux">Linux</a>
+                
+                    <a href="/en/categories/tutorials">Tutorials</a>
+                
+            </span>
+        
+
+        
+    </div>
+
+    
+        <p>This article is a step-by-step tutorial on how to install a fork of DuckEnigma, and create some questions.
+Let&rsquo;s start by a recap of what DuckEnigma is.
+</p>
+
+        
+            <a href="/en/code/duckenigma-how-to/" class="more">Continue reading</a>
+        
     
 </div>
 
